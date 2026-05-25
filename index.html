@@ -1,214 +1,153 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>新能源产业数据看板</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    background: #0f1419;
-    color: #e8eaed;
-    min-height: 100vh;
-    padding: 32px 24px;
-  }
-
-  .header {
-    max-width: 960px;
-    margin: 0 auto 24px;
-  }
-
-  .header h1 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #f0f2f5;
-    letter-spacing: 0.02em;
-  }
-
-  .header p {
-    margin-top: 8px;
-    font-size: 0.875rem;
-    color: #8b949e;
-  }
-
-  .chart-container {
-    max-width: 960px;
-    margin: 0 auto;
-    background: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
-  }
-
-  .chart-title {
-    font-size: 1.125rem;
-    font-weight: 500;
-    color: #c9d1d9;
-    margin-bottom: 16px;
-  }
-
-  #chart {
-    width: 100%;
-    height: 520px;
-  }
-
-  .loading,
-  .error {
-    max-width: 960px;
-    margin: 48px auto;
-    text-align: center;
-    color: #8b949e;
-    font-size: 0.9375rem;
-  }
-
-  .error {
-    color: #f85149;
-  }
-  </style>
 </head>
 <body>
-  <div class="header">
-    <h1>新能源产业数据看板</h1>
-    <p id="subtitle">加载中…</p>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">E<span>.</span>Dashboard</a>
+    <a href="index.html" class="nav-link active">概览</a>
+    <a href="nev.html" class="nav-link">新能源汽车</a>
+    <a href="battery.html" class="nav-link">动力电池</a>
+    <a href="pv.html" class="nav-link">光伏</a>
+    <a href="h2.html" class="nav-link">氢能</a>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" title="切换主题">☀️</button>
   </div>
-  <div id="loading" class="loading">正在加载数据…</div>
-  <div id="error" class="error" style="display: none;"></div>
-  <div id="panel" class="chart-container" style="display: none;">
-    <div class="chart-title" id="chart-title"></div>
-    <div id="chart"></div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>产业数据概览</h1>
+    <p id="update-info">加载中…</p>
   </div>
 
-  <script>
-  (function () {
-    var chartEl = document.getElementById("chart");
-    var loadingEl = document.getElementById("loading");
-    var errorEl = document.getElementById("error");
-    var panelEl = document.getElementById("panel");
-    var subtitleEl = document.getElementById("subtitle");
-    var chartTitleEl = document.getElementById("chart-title");
+  <div class="metrics-grid" id="metrics-grid">
+    <div class="metric-card"><div class="label">加载中</div><div class="value">—</div></div>
+    <div class="metric-card"><div class="label">加载中</div><div class="value">—</div></div>
+    <div class="metric-card"><div class="label">加载中</div><div class="value">—</div></div>
+    <div class="metric-card"><div class="label">加载中</div><div class="value">—</div></div>
+  </div>
 
-    function formatMonth(month) {
-      var parts = month.split("-");
-      return parts[0] + "年" + parseInt(parts[1], 10) + "月";
+  <div class="section-title">产业板块</div>
+  <div class="industry-grid" id="industry-grid"></div>
+
+  <div class="section-title">近期行业动态</div>
+  <div class="timeline" id="timeline">
+    <div class="loading-text">加载中…</div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function () {
+  var industryNames = { H2: '氢能', NEV: '新能源汽车', BATTERY: '动力电池', PV: '光伏' };
+  var industryIcons = { H2: '🟢', NEV: '🚗', BATTERY: '🔋', PV: '☀️' };
+  var industryLinks = { H2: 'h2.html', NEV: 'nev.html', BATTERY: 'battery.html', PV: 'pv.html' };
+  var industryDesc = {
+    NEV: '厂商销量排名 · 月度趋势 · 车型 TOP20',
+    BATTERY: '产量/装车量趋势 · 三元 vs 铁锂份额',
+    PV: '硅料/硅片/电池片/组件 · 周度价格走势',
+    H2: '项目库 · 电解槽招标成本 · 政策追踪'
+  };
+
+  function fmtNum(n) {
+    if (n >= 1e8) return (n / 1e8).toFixed(1) + '亿';
+    if (n >= 1e4) return (n / 1e4).toFixed(1) + '万';
+    return n.toLocaleString('zh-CN');
+  }
+  function fmtMonth(m) {
+    if (!m) return ''; var p = m.split('-');
+    return p[0] + '年' + parseInt(p[1], 10) + '月';
+  }
+
+  Promise.all([
+    fetch('data/overview.json').then(function (r) { return r.json(); }),
+    fetch('data/meta.json').then(function (r) { return r.json(); })
+  ]).then(function (res) {
+    var ov = res[0], meta = res[1];
+    renderMetrics(ov);
+    renderIndustry(meta, ov);
+    renderTimeline(ov.recent_events);
+    document.getElementById('update-info').textContent =
+      '数据更新至 ' + (meta.export_date || '').slice(0, 10);
+  }).catch(function (e) {
+    document.getElementById('update-info').textContent = '加载失败: ' + e.message;
+  });
+
+  function renderMetrics(d) {
+    var cards = [];
+    var nev = d.nev_monthly;
+    if (nev && nev[0]) {
+      var mom = nev[1] ? ((nev[0].total_volume - nev[1].total_volume) / nev[1].total_volume * 100) : null;
+      cards.push({ label: 'NEV 批发总量 · ' + fmtMonth(nev[0].record_date),
+        value: fmtNum(nev[0].total_volume) + ' 辆',
+        sub: mom !== null ? (mom >= 0 ? '↑' : '↓') + ' 环比 ' + Math.abs(mom).toFixed(1) + '%' : '',
+        trend: mom >= 0 ? 'up' : 'down' });
     }
-
-    function formatVolume(value) {
-      return value.toLocaleString("zh-CN") + " 辆";
+    var bat = d.battery_trend;
+    if (bat) {
+      var prod = bat.filter(function (r) { return r.subcategory === '动力和储能/其他合计'; });
+      if (prod.length) {
+        var latest = prod[prod.length - 1];
+        cards.push({ label: '电池产量 · ' + latest.record_date,
+          value: latest.value.toFixed(1) + ' GWh',
+          sub: latest.yoy ? '同比 ' + (latest.yoy > 0 ? '+' : '') + (latest.yoy * 100).toFixed(1) + '%' : '',
+          trend: (latest.yoy || 0) >= 0 ? 'up' : 'down' });
+      }
     }
-
-    function showError(message) {
-      loadingEl.style.display = "none";
-      errorEl.style.display = "block";
-      errorEl.textContent = message;
-      subtitleEl.textContent = "数据加载失败";
+    if (d.h2_project_status) {
+      var tot = d.h2_project_status.reduce(function (s, r) { return s + r.count; }, 0);
+      var inv = d.h2_project_status.reduce(function (s, r) { return s + r.total_investment; }, 0);
+      cards.push({ label: '氢能项目库', value: tot + ' 个', sub: '总投资 ' + inv.toFixed(0) + ' 亿元', trend: 'up' });
     }
+    if (d.recent_events) {
+      cards.push({ label: '产业资讯', value: d.recent_events.length + '+', sub: '近期收录事件', trend: 'up' });
+    }
+    document.getElementById('metrics-grid').innerHTML = cards.map(function (c) {
+      return '<div class="metric-card"><div class="label">' + c.label + '</div>' +
+        '<div class="value">' + c.value + '</div>' +
+        '<div class="sub"><span class="trend-' + c.trend + '">' + c.sub + '</span></div></div>';
+    }).join('');
+  }
 
-    fetch("data/nev_top_manufacturers.json")
-      .then(function (res) {
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        return res.json();
-      })
-      .then(function (json) {
-        var top10 = json.data
-          .slice()
-          .sort(function (a, b) { return b.sales_volume - a.sales_volume; })
-          .slice(0, 10)
-          .reverse();
+  function renderIndustry(meta, ov) {
+    var tc = {};
+    (meta.table_counts || []).forEach(function (r) { tc[r.t] = r.n; });
+    var stats = {
+      NEV: (tc.nev_manufacturer_sales || 0) + ' 条销量记录',
+      BATTERY: (meta.metric_catalog ? meta.metric_catalog.filter(function (m) { return m.industry_id === 'BATTERY'; }).length : 0) + ' 个跟踪指标',
+      PV: (tc.pv_material_prices || 0) + ' 条价格数据',
+      H2: (tc.h2_projects || 0) + ' 个项目 · ' + (tc.h2_bids || 0) + ' 条招标'
+    };
+    document.getElementById('industry-grid').innerHTML = ['NEV', 'BATTERY', 'PV', 'H2'].map(function (id) {
+      return '<a href="' + industryLinks[id] + '" class="industry-card">' +
+        '<div class="ind-header"><div class="ind-icon">' + industryIcons[id] + '</div>' +
+        '<div class="ind-name">' + industryNames[id] + '</div></div>' +
+        '<div class="ind-desc">' + industryDesc[id] + '</div>' +
+        '<div class="ind-stats">' + stats[id] + '</div></a>';
+    }).join('');
+  }
 
-        var names = top10.map(function (item) { return item.company_name; });
-        var values = top10.map(function (item) { return item.sales_volume; });
-        var monthLabel = formatMonth(json.month);
-
-        loadingEl.style.display = "none";
-        panelEl.style.display = "block";
-        subtitleEl.textContent = "数据来源：NEV 厂商批发销量 · 更新至 " + monthLabel;
-        chartTitleEl.textContent = monthLabel + " NEV 批发销量 TOP10 厂商";
-
-        var chart = echarts.init(chartEl, null, { renderer: "canvas" });
-
-        chart.setOption({
-          backgroundColor: "transparent",
-          grid: {
-            left: 120,
-            right: 48,
-            top: 16,
-            bottom: 32,
-            containLabel: false
-          },
-          tooltip: {
-            trigger: "axis",
-            axisPointer: { type: "shadow" },
-            backgroundColor: "#21262d",
-            borderColor: "#30363d",
-            textStyle: { color: "#e8eaed" },
-            formatter: function (params) {
-              var item = params[0];
-              return item.name + "<br/>批发销量：<b>" + formatVolume(item.value) + "</b>";
-            }
-          },
-          xAxis: {
-            type: "value",
-            name: "销量（辆）",
-            nameTextStyle: { color: "#8b949e", padding: [0, 0, 0, 8] },
-            axisLine: { lineStyle: { color: "#30363d" } },
-            axisLabel: {
-              color: "#8b949e",
-              formatter: function (v) {
-                return v >= 10000 ? (v / 10000) + "万" : v;
-              }
-            },
-            splitLine: { lineStyle: { color: "#21262d", type: "dashed" } }
-          },
-          yAxis: {
-            type: "category",
-            data: names,
-            axisLine: { show: false },
-            axisTick: { show: false },
-            axisLabel: {
-              color: "#c9d1d9",
-              fontSize: 13
-            }
-          },
-          series: [{
-            type: "bar",
-            data: values,
-            barMaxWidth: 28,
-            itemStyle: {
-              borderRadius: [0, 4, 4, 0],
-              color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                { offset: 0, color: "#1a7f64" },
-                { offset: 1, color: "#3fb950" }
-              ])
-            },
-            label: {
-              show: true,
-              position: "right",
-              color: "#8b949e",
-              fontSize: 12,
-              formatter: function (params) {
-                return formatVolume(params.value);
-              }
-            }
-          }]
-        });
-
-        window.addEventListener("resize", function () {
-          chart.resize();
-        });
-      })
-      .catch(function (err) {
-        showError("无法加载数据：" + err.message);
-      });
-  })();
-  </script>
+  function renderTimeline(events) {
+    var box = document.getElementById('timeline');
+    if (!events || !events.length) { box.innerHTML = '<div class="loading-text">暂无数据</div>'; return; }
+    box.innerHTML = events.slice(0, 15).map(function (e) {
+      return '<div class="timeline-item">' +
+        '<div class="timeline-date">' + (e.event_date || '').slice(5) + '</div>' +
+        '<span class="timeline-tag tag-' + e.industry_id + '">' + (industryNames[e.industry_id] || e.industry_id) + '</span>' +
+        '<div class="timeline-content"><div class="timeline-title">' + e.title + '</div>' +
+        (e.summary ? '<div class="timeline-summary">' + e.summary + '</div>' : '') +
+        '</div></div>';
+    }).join('');
+  }
+})();
+</script>
 </body>
 </html>

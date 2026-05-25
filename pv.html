@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>光伏 · 新能源产业数据看板</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  .chart-box { width: 100%; height: 360px; }
+  .pv-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .pv-charts-grid .chart-panel { margin-bottom: 0; }
+  .table-section { margin-bottom: 28px; }
+  .table-group {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .table-group-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .table-group-date {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-left: 8px;
+  }
+  @media (max-width: 640px) {
+    .pv-charts-grid { grid-template-columns: 1fr; }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">E<span>.</span>Dashboard</a>
+    <a href="index.html" class="nav-link">概览</a>
+    <a href="nev.html" class="nav-link">新能源汽车</a>
+    <a href="battery.html" class="nav-link">动力电池</a>
+    <a href="pv.html" class="nav-link active">光伏</a>
+    <a href="h2.html" class="nav-link">氢能</a>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" title="切换主题">☀️</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>光伏</h1>
+    <p id="subtitle">加载中…</p>
+  </div>
+
+  <div id="loading" class="loading-text">正在加载数据…</div>
+  <div id="error" class="loading-text" style="display: none; color: var(--red);"></div>
+
+  <div id="panels" style="display: none;">
+    <div class="section-title">周度均价走势</div>
+    <div class="pv-charts-grid" id="charts-grid"></div>
+
+    <div class="section-title">最新价格汇总</div>
+    <div class="table-section" id="tables-container"></div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function () {
+  var cachedRows = null;
+  window.dashboardCharts = [];
+
+  var GROUP_ORDER = ['多晶硅', '硅片', '电池片', '组件', '光伏玻璃'];
+  var CHART_IDS = {
+    '多晶硅': 'chart-poly',
+    '硅片': 'chart-wafer',
+    '电池片': 'chart-cell',
+    '组件': 'chart-module',
+    '光伏玻璃': 'chart-glass'
+  };
+  var PREFERRED_RAW = [
+    '多晶硅', '硅片', '电池片', '组件', '光伏玻璃', '中国区组件价格'
+  ];
+
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function chartTheme() {
+    return {
+      text: cssVar('--text-secondary'),
+      textMuted: cssVar('--text-tertiary'),
+      textPrimary: cssVar('--text-primary'),
+      grid: cssVar('--chart-grid'),
+      border: cssVar('--border-default'),
+      tooltipBg: cssVar('--chart-tooltip-bg'),
+      purple: cssVar('--purple'),
+      palette: [
+        cssVar('--purple'),
+        cssVar('--blue'),
+        cssVar('--accent'),
+        cssVar('--orange'),
+        cssVar('--red'),
+        cssVar('--purple'),
+        cssVar('--blue'),
+        cssVar('--accent')
+      ]
+    };
+  }
+
+  function normalizeCategory(raw) {
+    if (!raw) return raw;
+    if (raw.indexOf('光伏玻璃') !== -1) return '光伏玻璃';
+    if (raw.indexOf('多晶硅') !== -1) return '多晶硅';
+    if (raw.indexOf('电池片') !== -1) return '电池片';
+    if (raw.indexOf('硅片') !== -1) return '硅片';
+    if (raw.indexOf('组件') !== -1) return '组件';
+    return raw;
+  }
+
+  function rawCategoryRank(raw) {
+    var i = PREFERRED_RAW.indexOf(raw);
+    return i === -1 ? 99 : i;
+  }
+
+  function normalizeRows(rows) {
+    return rows.map(function (r) {
+      return {
+        record_date: r.record_date,
+        category: r.category,
+        group: normalizeCategory(r.category),
+        product_name: r.product_name,
+        currency: r.currency,
+        price_unit: r.price_unit,
+        price_high: Number(r.price_high),
+        price_low: Number(r.price_low),
+        price_avg: Number(r.price_avg),
+        wow_change: r.wow_change == null ? null : Number(r.wow_change)
+      };
+    });
+  }
+
+  function compareDate(a, b) {
+    return a < b ? -1 : a > b ? 1 : 0;
+  }
+
+  function formatDateLabel(dateStr) {
+    var p = dateStr.split('-');
+    return parseInt(p[1], 10) + '/' + parseInt(p[2], 10);
+  }
+
+  function formatDateFull(dateStr) {
+    var p = dateStr.split('-');
+    return p[0] + '年' + parseInt(p[1], 10) + '月' + parseInt(p[2], 10) + '日';
+  }
+
+  function formatPrice(v) {
+    if (v == null || isNaN(v)) return '—';
+    return Number(v).toLocaleString('zh-CN', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 4
+    });
+  }
+
+  function formatWow(v) {
+    if (v == null || isNaN(v)) return '—';
+    var pct = v * 100;
+    return (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%';
+  }
+
+  function wowClass(v) {
+    if (v == null || isNaN(v)) return '';
+    return v >= 0 ? 'trend-up' : 'trend-down';
+  }
+
+  function escapeHtml(s) {
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function disposeCharts() {
+    window.dashboardCharts.forEach(function (c) { c.dispose(); });
+    window.dashboardCharts = [];
+  }
+
+  function registerChart(el, option) {
+    if (!el) return null;
+    var existing = echarts.getInstanceByDom(el);
+    if (existing) existing.dispose();
+    var chart = echarts.init(el, null, { renderer: 'canvas' });
+    chart.setOption(option);
+    window.dashboardCharts.push(chart);
+    return chart;
+  }
+
+  function baseTooltip(t) {
+    return {
+      trigger: 'axis',
+      backgroundColor: t.tooltipBg,
+      borderColor: t.border,
+      textStyle: { color: t.textPrimary }
+    };
+  }
+
+  function buildGroupSeries(rows, group) {
+    var filtered = rows.filter(function (r) { return r.group === group; });
+    var dates = [];
+    var products = [];
+    var lookup = {};
+    var rankMap = {};
+    var units = {};
+
+    filtered.forEach(function (r) {
+      if (dates.indexOf(r.record_date) === -1) dates.push(r.record_date);
+      if (products.indexOf(r.product_name) === -1) products.push(r.product_name);
+      units[r.product_name] = r.price_unit || '';
+
+      var key = r.product_name + '\0' + r.record_date;
+      var rank = rawCategoryRank(r.category);
+      if (!rankMap[key] || rank < rankMap[key]) {
+        rankMap[key] = rank;
+        if (!lookup[r.product_name]) lookup[r.product_name] = {};
+        lookup[r.product_name][r.record_date] = r.price_avg;
+      }
+    });
+
+    dates.sort(compareDate);
+    products.sort();
+    return { dates: dates, products: products, lookup: lookup, units: units };
+  }
+
+  function renderCategoryChart(el, group, seriesData, t) {
+    var series = seriesData.products.map(function (name) {
+      return {
+        name: name,
+        type: 'line',
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: { width: 2 },
+        data: seriesData.dates.map(function (d) {
+          var v = seriesData.lookup[name] && seriesData.lookup[name][d];
+          return v != null && !isNaN(v) ? v : null;
+        })
+      };
+    });
+
+    var unitHint = '';
+    var unitSet = {};
+    seriesData.products.forEach(function (p) {
+      if (seriesData.units[p]) unitSet[seriesData.units[p]] = true;
+    });
+    var unitKeys = Object.keys(unitSet);
+    if (unitKeys.length === 1) unitHint = unitKeys[0];
+    else if (unitKeys.length > 1) unitHint = unitKeys.join(' / ');
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 52, right: 20, top: 56, bottom: 36 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatDateFull(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value == null) return;
+            var u = seriesData.units[p.seriesName] || '';
+            lines.push(
+              p.marker + p.seriesName + '：<b>' + formatPrice(p.value) +
+              (u ? ' ' + u : '') + '</b>'
+            );
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        type: 'scroll',
+        top: 0,
+        textStyle: { color: t.text, fontSize: 10 },
+        pageTextStyle: { color: t.text },
+        pageIconColor: t.text,
+        pageIconInactiveColor: t.textMuted
+      },
+      xAxis: {
+        type: 'category',
+        data: seriesData.dates,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: {
+          color: t.text,
+          fontSize: 10,
+          formatter: formatDateLabel,
+          rotate: 35
+        }
+      },
+      yAxis: {
+        type: 'value',
+        name: unitHint ? '均价（' + unitHint + '）' : '均价',
+        nameTextStyle: { color: t.text, fontSize: 11 },
+        axisLine: { show: false },
+        axisLabel: { color: t.text },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function buildLatestByGroup(rows) {
+    var result = {};
+    GROUP_ORDER.forEach(function (g) {
+      var groupRows = rows.filter(function (r) { return r.group === g; });
+      if (!groupRows.length) return;
+
+      var latest = groupRows.reduce(function (max, r) {
+        return compareDate(r.record_date, max) > 0 ? r.record_date : max;
+      }, groupRows[0].record_date);
+
+      var onDate = groupRows.filter(function (r) { return r.record_date === latest; });
+      var byProduct = {};
+      var rankMap = {};
+
+      onDate.forEach(function (r) {
+        var rank = rawCategoryRank(r.category);
+        if (!rankMap[r.product_name] || rank < rankMap[r.product_name]) {
+          rankMap[r.product_name] = rank;
+          byProduct[r.product_name] = r;
+        }
+      });
+
+      var products = Object.keys(byProduct).sort().map(function (k) { return byProduct[k]; });
+      result[g] = { date: latest, products: products };
+    });
+    return result;
+  }
+
+  function renderTables(latestMap) {
+    var html = '';
+    GROUP_ORDER.forEach(function (g) {
+      var block = latestMap[g];
+      if (!block || !block.products.length) return;
+
+      html += '<div class="table-group">' +
+        '<div class="table-group-title">' + escapeHtml(g) +
+        '<span class="table-group-date">' + formatDateFull(block.date) + '</span></div>' +
+        '<table class="data-table"><thead><tr>' +
+        '<th>产品</th>' +
+        '<th class="num">最高价</th>' +
+        '<th class="num">最低价</th>' +
+        '<th class="num">均价</th>' +
+        '<th class="num">周环比</th>' +
+        '</tr></thead><tbody>';
+
+      block.products.forEach(function (r) {
+        var unit = r.price_unit ? ' ' + escapeHtml(r.price_unit) : '';
+        html += '<tr>' +
+          '<td>' + escapeHtml(r.product_name) + '</td>' +
+          '<td class="num">' + formatPrice(r.price_high) + unit + '</td>' +
+          '<td class="num">' + formatPrice(r.price_low) + unit + '</td>' +
+          '<td class="num">' + formatPrice(r.price_avg) + unit + '</td>' +
+          '<td class="num"><span class="' + wowClass(r.wow_change) + '">' +
+          formatWow(r.wow_change) + '</span></td>' +
+          '</tr>';
+      });
+
+      html += '</tbody></table></div>';
+    });
+    document.getElementById('tables-container').innerHTML = html;
+  }
+
+  function buildChartPanels() {
+    var grid = document.getElementById('charts-grid');
+    grid.innerHTML = GROUP_ORDER.map(function (g) {
+      return '<div class="chart-panel">' +
+        '<div class="chart-title">' + escapeHtml(g) + ' · 均价走势</div>' +
+        '<div class="chart-subtitle">按产品维度 · 周度更新</div>' +
+        '<div id="' + CHART_IDS[g] + '" class="chart-box"></div></div>';
+    }).join('');
+  }
+
+  window.initCharts = function () {
+    if (!cachedRows) return;
+    disposeCharts();
+    var t = chartTheme();
+
+    GROUP_ORDER.forEach(function (g) {
+      var data = buildGroupSeries(cachedRows, g);
+      var el = document.getElementById(CHART_IDS[g]);
+      if (data.products.length && data.dates.length) {
+        renderCategoryChart(el, g, data, t);
+      }
+    });
+
+    renderTables(buildLatestByGroup(cachedRows));
+  };
+
+  fetch('data/pv_prices.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (json) {
+      cachedRows = normalizeRows(json);
+      buildChartPanels();
+
+      var globalLatest = cachedRows.reduce(function (max, r) {
+        return !max || compareDate(r.record_date, max) > 0 ? r.record_date : max;
+      }, '');
+
+      document.getElementById('subtitle').textContent =
+        '硅料 / 硅片 / 电池片 / 组件 / 光伏玻璃周度价格 · 更新至 ' +
+        formatDateFull(globalLatest);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('panels').style.display = 'block';
+      window.initCharts();
+      requestAnimationFrame(function () {
+        window.dashboardCharts.forEach(function (c) { c.resize(); });
+      });
+    })
+    .catch(function (err) {
+      document.getElementById('loading').style.display = 'none';
+      var errorEl = document.getElementById('error');
+      errorEl.style.display = 'block';
+      errorEl.textContent = '无法加载数据：' + err.message;
+      document.getElementById('subtitle').textContent = '数据加载失败';
+    });
+
+  window.addEventListener('resize', function () {
+    window.dashboardCharts.forEach(function (c) { c.resize(); });
+  });
+})();
+</script>
+</body>
+</html>

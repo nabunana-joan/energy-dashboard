@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动力电池 · 新能源产业数据看板</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  .chart-box { width: 100%; height: 400px; }
+  #chart-share { height: 380px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">E<span>.</span>Dashboard</a>
+    <a href="index.html" class="nav-link">概览</a>
+    <a href="nev.html" class="nav-link">新能源汽车</a>
+    <a href="battery.html" class="nav-link active">动力电池</a>
+    <a href="pv.html" class="nav-link">光伏</a>
+    <a href="h2.html" class="nav-link">氢能</a>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" title="切换主题">☀️</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>动力电池</h1>
+    <p id="subtitle">加载中…</p>
+  </div>
+
+  <div id="loading" class="loading-text">正在加载数据…</div>
+  <div id="error" class="loading-text" style="display: none; color: var(--red);"></div>
+
+  <div id="panels" style="display: none;">
+    <div class="chart-panel">
+      <div class="chart-title">产量 · 月度趋势</div>
+      <div class="chart-subtitle">各细分维度产量（GWh）</div>
+      <div id="chart-production" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title">装车量 · 月度趋势</div>
+      <div class="chart-subtitle">各细分维度装车量（GWh）</div>
+      <div id="chart-install" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title">装车量结构 · 三元 vs 磷酸铁锂</div>
+      <div class="chart-subtitle">装车量份额变化（%）</div>
+      <div id="chart-share" class="chart-box"></div>
+    </div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function () {
+  var cachedRows = null;
+  window.dashboardCharts = [];
+
+  var PRODUCTION_ORDER = [
+    '动力和储能/其他合计',
+    '三元电池',
+    '磷酸铁锂电池',
+    '动力电池'
+  ];
+  var INSTALL_ORDER = [
+    '动力电池合计',
+    '三元电池',
+    '磷酸铁锂电池'
+  ];
+
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function chartTheme() {
+    return {
+      text: cssVar('--text-secondary'),
+      textMuted: cssVar('--text-tertiary'),
+      textPrimary: cssVar('--text-primary'),
+      grid: cssVar('--chart-grid'),
+      border: cssVar('--border-default'),
+      tooltipBg: cssVar('--chart-tooltip-bg'),
+      orange: cssVar('--orange'),
+      blue: cssVar('--blue'),
+      accent: cssVar('--accent'),
+      purple: cssVar('--purple'),
+      palette: [
+        cssVar('--orange'),
+        cssVar('--blue'),
+        cssVar('--accent'),
+        cssVar('--purple'),
+        cssVar('--red')
+      ]
+    };
+  }
+
+  function formatMonth(month) {
+    var p = month.split('-');
+    return p[0] + '年' + parseInt(p[1], 10) + '月';
+  }
+
+  function formatMonthShort(month) {
+    return parseInt(month.split('-')[1], 10) + '月';
+  }
+
+  function formatGWh(v) {
+    return Number(v).toFixed(1) + ' GWh';
+  }
+
+  function formatPct(v) {
+    return Number(v).toFixed(1) + '%';
+  }
+
+  function formatYoyMom(yoy, mom) {
+    var parts = [];
+    if (yoy != null && !isNaN(yoy)) {
+      parts.push('同比 ' + (yoy >= 0 ? '+' : '') + (yoy * 100).toFixed(1) + '%');
+    }
+    if (mom != null && !isNaN(mom)) {
+      parts.push('环比 ' + (mom >= 0 ? '+' : '') + (mom * 100).toFixed(1) + '%');
+    }
+    return parts.length ? '（' + parts.join(' · ') + '）' : '';
+  }
+
+  function disposeCharts() {
+    window.dashboardCharts.forEach(function (c) { c.dispose(); });
+    window.dashboardCharts = [];
+  }
+
+  function registerChart(el, option) {
+    var existing = echarts.getInstanceByDom(el);
+    if (existing) existing.dispose();
+    var chart = echarts.init(el, null, { renderer: 'canvas' });
+    chart.setOption(option);
+    window.dashboardCharts.push(chart);
+    return chart;
+  }
+
+  function baseTooltip(t) {
+    return {
+      trigger: 'axis',
+      backgroundColor: t.tooltipBg,
+      borderColor: t.border,
+      textStyle: { color: t.textPrimary }
+    };
+  }
+
+  function normalizeRows(rows) {
+    return rows.map(function (r) {
+      return {
+        record_date: r.record_date,
+        category: r.category,
+        subcategory: r.subcategory,
+        value: Number(r.value),
+        yoy: r.yoy == null ? null : Number(r.yoy),
+        mom: r.mom == null ? null : Number(r.mom)
+      };
+    });
+  }
+
+  function getMonths(rows) {
+    var months = [];
+    rows.forEach(function (r) {
+      if (months.indexOf(r.record_date) === -1) months.push(r.record_date);
+    });
+    return months.sort();
+  }
+
+  function sortSubcategories(names, orderList) {
+    return names.slice().sort(function (a, b) {
+      var ia = orderList.indexOf(a);
+      var ib = orderList.indexOf(b);
+      if (ia === -1) ia = orderList.length;
+      if (ib === -1) ib = orderList.length;
+      return ia - ib;
+    });
+  }
+
+  function buildCategoryData(rows, category, orderList) {
+    var filtered = rows.filter(function (r) { return r.category === category; });
+    var months = getMonths(filtered);
+    var subSet = {};
+    filtered.forEach(function (r) { subSet[r.subcategory] = true; });
+    var subcategories = sortSubcategories(Object.keys(subSet), orderList);
+
+    var lookup = {};
+    var meta = {};
+    filtered.forEach(function (r) {
+      if (!lookup[r.subcategory]) lookup[r.subcategory] = {};
+      lookup[r.subcategory][r.record_date] = r.value;
+      meta[r.subcategory + '|' + r.record_date] = { yoy: r.yoy, mom: r.mom };
+    });
+
+    return { months: months, subcategories: subcategories, lookup: lookup, meta: meta };
+  }
+
+  function lineChartOption(el, title, months, subcategories, lookup, meta, t, unitLabel) {
+    var series = subcategories.map(function (name) {
+      return {
+        name: name,
+        type: 'line',
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 6,
+        lineStyle: { width: 2 },
+        data: months.map(function (m) {
+          var v = lookup[name] && lookup[name][m];
+          return v != null && !isNaN(v) ? v : null;
+        })
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 48, right: 24, top: 56, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value == null) return;
+            var key = p.seriesName + '|' + p.axisValue;
+            var extra = meta[key] ? formatYoyMom(meta[key].yoy, meta[key].mom) : '';
+            lines.push(
+              p.marker + p.seriesName + '：<b>' + formatGWh(p.value) + '</b>' + extra
+            );
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        type: 'scroll',
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 },
+        pageTextStyle: { color: t.text },
+        pageIconColor: t.text,
+        pageIconInactiveColor: t.textMuted
+      },
+      xAxis: {
+        type: 'category',
+        data: months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: unitLabel,
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function renderShare(el, rows, t) {
+    var filtered = rows.filter(function (r) {
+      return r.category === '装车量' &&
+        (r.subcategory === '三元电池' || r.subcategory === '磷酸铁锂电池');
+    });
+    var months = getMonths(filtered);
+    var lookup = { '三元电池': {}, '磷酸铁锂电池': {} };
+
+    filtered.forEach(function (r) {
+      lookup[r.subcategory][r.record_date] = r.value;
+    });
+
+    var shareNcm = [];
+    var shareLfp = [];
+    months.forEach(function (m) {
+      var ncm = lookup['三元电池'][m];
+      var lfp = lookup['磷酸铁锂电池'][m];
+      if (ncm == null || lfp == null || isNaN(ncm) || isNaN(lfp)) {
+        shareNcm.push(null);
+        shareLfp.push(null);
+        return;
+      }
+      var total = ncm + lfp;
+      if (total <= 0) {
+        shareNcm.push(null);
+        shareLfp.push(null);
+        return;
+      }
+      shareNcm.push(+(ncm / total * 100).toFixed(1));
+      shareLfp.push(+(lfp / total * 100).toFixed(1));
+    });
+
+    function areaColor(hex, alpha) {
+      if (/^#[0-9a-fA-F]{6}$/.test(hex)) return hex + alpha;
+      return hex;
+    }
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: [t.blue, t.orange],
+      grid: { left: 48, right: 24, top: 48, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value != null) {
+              lines.push(p.marker + p.seriesName + '：<b>' + formatPct(p.value) + '</b>');
+            }
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 }
+      },
+      xAxis: {
+        type: 'category',
+        data: months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '份额',
+        max: 100,
+        min: 0,
+        nameTextStyle: { color: t.text },
+        axisLabel: { color: t.text, formatter: '{value}%' },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: [
+        {
+          name: '三元电池',
+          type: 'line',
+          stack: 'share',
+          smooth: true,
+          symbol: 'none',
+          lineStyle: { width: 0 },
+          areaStyle: { color: areaColor(t.blue, '55') },
+          emphasis: { focus: 'series' },
+          data: shareNcm
+        },
+        {
+          name: '磷酸铁锂电池',
+          type: 'line',
+          stack: 'share',
+          smooth: true,
+          symbol: 'none',
+          lineStyle: { width: 0 },
+          areaStyle: { color: areaColor(t.orange, '55') },
+          emphasis: { focus: 'series' },
+          data: shareLfp
+        }
+      ]
+    });
+  }
+
+  window.initCharts = function () {
+    if (!cachedRows) return;
+    disposeCharts();
+    var t = chartTheme();
+
+    var production = buildCategoryData(cachedRows, '产量', PRODUCTION_ORDER);
+    lineChartOption(
+      document.getElementById('chart-production'),
+      '产量',
+      production.months,
+      production.subcategories,
+      production.lookup,
+      production.meta,
+      t,
+      'GWh'
+    );
+
+    var install = buildCategoryData(cachedRows, '装车量', INSTALL_ORDER);
+    lineChartOption(
+      document.getElementById('chart-install'),
+      '装车量',
+      install.months,
+      install.subcategories,
+      install.lookup,
+      install.meta,
+      t,
+      'GWh'
+    );
+
+    renderShare(document.getElementById('chart-share'), cachedRows, t);
+  };
+
+  fetch('data/battery_metrics.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (json) {
+      cachedRows = normalizeRows(json);
+      var months = getMonths(cachedRows);
+      var latest = months[months.length - 1];
+      document.getElementById('subtitle').textContent =
+        '产量 / 装车量月度数据 · 更新至 ' + formatMonth(latest);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('panels').style.display = 'block';
+      window.initCharts();
+      requestAnimationFrame(function () {
+        window.dashboardCharts.forEach(function (c) { c.resize(); });
+      });
+    })
+    .catch(function (err) {
+      document.getElementById('loading').style.display = 'none';
+      var errorEl = document.getElementById('error');
+      errorEl.style.display = 'block';
+      errorEl.textContent = '无法加载数据：' + err.message;
+      document.getElementById('subtitle').textContent = '数据加载失败';
+    });
+
+  window.addEventListener('resize', function () {
+    window.dashboardCharts.forEach(function (c) { c.resize(); });
+  });
+})();
+</script>
+</body>
+</html>

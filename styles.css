@@ -1,0 +1,416 @@
+/* ═══════════════════════════════════════
+   新能源产业看板 · 共享样式
+   双主题 · 科技简约风
+   ═══════════════════════════════════════ */
+
+/* ── 深色主题（默认） ── */
+:root, [data-theme="dark"] {
+  --bg-base: #0c0e12;
+  --bg-surface: #14171e;
+  --bg-elevated: #1a1e27;
+  --bg-hover: #222735;
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.09);
+  --text-primary: #eeeff2;
+  --text-secondary: #858b98;
+  --text-tertiary: #555b69;
+  --accent: #36d399;
+  --accent-soft: rgba(54, 211, 153, 0.1);
+  --accent-hover: rgba(54, 211, 153, 0.18);
+  --blue: #5b9ef5;
+  --blue-soft: rgba(91, 158, 245, 0.1);
+  --orange: #f5a623;
+  --orange-soft: rgba(245, 166, 35, 0.1);
+  --purple: #a78bfa;
+  --purple-soft: rgba(167, 139, 250, 0.1);
+  --red: #f06c75;
+  --red-soft: rgba(240, 108, 117, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.5);
+  --glass-bg: rgba(20, 23, 30, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --chart-grid: rgba(255,255,255,0.04);
+  --chart-tooltip-bg: #1a1e27;
+}
+
+/* ── 浅色主题 ── */
+[data-theme="light"] {
+  --bg-base: #f4f5f7;
+  --bg-surface: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-hover: #f0f1f3;
+  --border-subtle: rgba(0, 0, 0, 0.04);
+  --border-default: rgba(0, 0, 0, 0.08);
+  --text-primary: #1a1c20;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
+  --accent: #10b981;
+  --accent-soft: rgba(16, 185, 129, 0.08);
+  --accent-hover: rgba(16, 185, 129, 0.14);
+  --blue: #3b82f6;
+  --blue-soft: rgba(59, 130, 246, 0.08);
+  --orange: #f59e0b;
+  --orange-soft: rgba(245, 158, 11, 0.08);
+  --purple: #8b5cf6;
+  --purple-soft: rgba(139, 92, 246, 0.08);
+  --red: #ef4444;
+  --red-soft: rgba(239, 68, 68, 0.08);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(0, 0, 0, 0.06);
+  --chart-grid: rgba(0,0,0,0.04);
+  --chart-tooltip-bg: #ffffff;
+}
+
+/* ── 基础重置 ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ── 导航栏 ── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0 24px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+}
+.navbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 52px;
+  gap: 4px;
+}
+.brand {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-right: 20px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.brand span { color: var(--accent); }
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+.nav-link:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+.nav-link.active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* 主题切换按钮 */
+.nav-spacer { flex: 1; }
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* ── 主容器 ── */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px;
+}
+
+/* ── 页面头部 ── */
+.page-header { margin-bottom: 28px; }
+.page-header h1 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.page-header p {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  margin-top: 4px;
+}
+
+/* ── 指标卡片 ── */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.metric-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 18px 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.metric-card:hover {
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-sm);
+}
+.metric-card .label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+.metric-card .value {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.metric-card .sub {
+  font-size: 0.75rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+.trend-up { color: var(--accent); }
+.trend-down { color: var(--red); }
+
+/* ── 产业入口卡片 ── */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.industry-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+  display: block;
+}
+.industry-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--shadow-md);
+  transform: translateY(-1px);
+}
+.ind-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.ind-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  background: var(--accent-soft);
+}
+.ind-name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.ind-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.ind-stats {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 章节标题 ── */
+.section-title {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+/* ── 时间线 ── */
+.timeline {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+.timeline-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: flex-start;
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  min-width: 48px;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.timeline-tag {
+  font-size: 0.625rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.tag-H2 { background: var(--accent-soft); color: var(--accent); }
+.tag-NEV { background: var(--blue-soft); color: var(--blue); }
+.tag-BATTERY { background: var(--orange-soft); color: var(--orange); }
+.tag-PV { background: var(--purple-soft); color: var(--purple); }
+.timeline-content { flex: 1; min-width: 0; }
+.timeline-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+.timeline-summary {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+/* ── 图表面板 ── */
+.chart-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+  transition: border-color 0.2s;
+}
+.chart-panel:hover { border-color: var(--border-default); }
+.chart-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: -10px;
+  margin-bottom: 16px;
+}
+
+/* ── 表格 ── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8125rem;
+}
+.data-table th {
+  text-align: left;
+  padding: 10px 12px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--border-default);
+}
+.data-table td {
+  padding: 10px 12px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.data-table tr:hover td { background: var(--bg-hover); }
+.data-table .num {
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ── 状态标签 ── */
+.status-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.status-在建 { background: var(--blue-soft); color: var(--blue); }
+.status-招标 { background: var(--orange-soft); color: var(--orange); }
+.status-规划 { background: var(--purple-soft); color: var(--purple); }
+.status-投产 { background: var(--accent-soft); color: var(--accent); }
+.status-备案 { background: rgba(255,255,255,0.06); color: var(--text-secondary); }
+
+/* ── 星级评分 ── */
+.stars { color: var(--orange); letter-spacing: 1px; font-size: 0.75rem; }
+
+/* ── 工具类 ── */
+.loading-text {
+  text-align: center;
+  color: var(--text-tertiary);
+  padding: 40px;
+  font-size: 0.8125rem;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+  gap: 16px;
+}
+
+/* ── 响应式 ── */
+@media (max-width: 640px) {
+  .container { padding: 16px; }
+  .navbar-inner { gap: 2px; }
+  .nav-link { padding: 6px 8px; font-size: 0.75rem; }
+  .brand { font-size: 0.8125rem; margin-right: 8px; }
+  .metric-card .value { font-size: 1.375rem; }
+  .grid-2 { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>氢能 · 新能源产业数据看板</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  .chart-box { width: 100%; height: 420px; }
+  .table-wrap {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 16px 20px;
+    overflow-x: auto;
+    margin-bottom: 16px;
+  }
+  .policy-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+  }
+  .policy-issuer {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">E<span>.</span>Dashboard</a>
+    <a href="index.html" class="nav-link">概览</a>
+    <a href="nev.html" class="nav-link">新能源汽车</a>
+    <a href="battery.html" class="nav-link">动力电池</a>
+    <a href="pv.html" class="nav-link">光伏</a>
+    <a href="h2.html" class="nav-link active">氢能</a>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" title="切换主题">☀️</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>氢能</h1>
+    <p id="subtitle">加载中…</p>
+  </div>
+
+  <div id="loading" class="loading-text">正在加载数据…</div>
+  <div id="error" class="loading-text" style="display: none; color: var(--red);"></div>
+
+  <div id="panels" style="display: none;">
+    <div class="section-title">电解槽招标成本</div>
+    <div class="chart-panel">
+      <div class="chart-title">招标单价趋势</div>
+      <div class="chart-subtitle">散点大小表示制氢规模（Nm³/h）· 已排除估算与研究样本</div>
+      <div id="chart-bids" class="chart-box"></div>
+    </div>
+
+    <div class="section-title">项目库</div>
+    <div class="table-wrap">
+      <table class="data-table" id="projects-table">
+        <thead>
+          <tr>
+            <th>项目名称</th>
+            <th>业主</th>
+            <th>省份</th>
+            <th>产品类型</th>
+            <th>规模</th>
+            <th class="num">投资额（亿元）</th>
+            <th>状态</th>
+          </tr>
+        </thead>
+        <tbody id="projects-body"></tbody>
+      </table>
+    </div>
+
+    <div class="section-title">政策追踪</div>
+    <div class="timeline" id="policies-timeline"></div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function () {
+  var cached = { bids: null, projects: null, policies: null };
+  window.dashboardCharts = [];
+
+  var TECH_ROUTES = ['ALK', 'PEM', 'AEM'];
+
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function chartTheme() {
+    return {
+      text: cssVar('--text-secondary'),
+      textMuted: cssVar('--text-tertiary'),
+      textPrimary: cssVar('--text-primary'),
+      grid: cssVar('--chart-grid'),
+      border: cssVar('--border-default'),
+      tooltipBg: cssVar('--chart-tooltip-bg'),
+      accent: cssVar('--accent'),
+      blue: cssVar('--blue'),
+      purple: cssVar('--purple'),
+      routeColors: {
+        ALK: cssVar('--accent'),
+        PEM: cssVar('--blue'),
+        AEM: cssVar('--purple')
+      }
+    };
+  }
+
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  function compareDate(a, b) {
+    return a < b ? 1 : a > b ? -1 : 0;
+  }
+
+  function formatBidMonth(m) {
+    var p = m.split('-');
+    return p[0] + '年' + parseInt(p[1], 10) + '月';
+  }
+
+  function formatBidMonthShort(m) {
+    return parseInt(m.split('-')[1], 10) + '月';
+  }
+
+  function formatYi(v) {
+    if (v == null || isNaN(v)) return '—';
+    return Number(v).toLocaleString('zh-CN', {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2
+    });
+  }
+
+  function formatCapacity(n) {
+    if (n == null || isNaN(n)) return '—';
+    return Number(n).toLocaleString('zh-CN') + ' Nm³/h';
+  }
+
+  function formatPriceKw(v) {
+    if (v == null || isNaN(v)) return '—';
+    return Number(v).toLocaleString('zh-CN', { maximumFractionDigits: 1 }) + ' 元/kW';
+  }
+
+  function renderStars(rating) {
+    var n = Math.max(0, Math.min(5, Math.round(Number(rating) || 0)));
+    return '<span class="stars" title="影响力 ' + n + '/5">' +
+      '★'.repeat(n) + '☆'.repeat(5 - n) + '</span>';
+  }
+
+  function includeBid(r) {
+    return Number(r.is_estimated) !== 1 && Number(r.is_research) !== 1;
+  }
+
+  function normalizeBids(rows) {
+    return rows.filter(includeBid).map(function (r) {
+      return {
+        bid_date: r.bid_date,
+        project_name: r.project_name,
+        winner: r.winner,
+        tech_route: r.tech_route,
+        h2_capacity_nm3h: Number(r.h2_capacity_nm3h),
+        unit_price_kw_recalc: Number(r.unit_price_kw_recalc),
+        scope_type: r.scope_type,
+        is_estimated: Number(r.is_estimated),
+        is_research: Number(r.is_research)
+      };
+    });
+  }
+
+  function normalizeProjects(rows) {
+    return rows.map(function (r) {
+      return {
+        project_name: r.project_name,
+        owner: r.owner,
+        province: r.province,
+        product_type: r.product_type,
+        capacity_desc: r.capacity_desc,
+        investment_yi: r.investment_yi == null ? null : Number(r.investment_yi),
+        status: r.status,
+        status_date: r.status_date
+      };
+    }).sort(function (a, b) { return compareDate(a.status_date, b.status_date); });
+  }
+
+  function normalizePolicies(rows) {
+    return rows.map(function (r) {
+      return {
+        event_date: r.event_date,
+        issuer: r.issuer,
+        title: r.title,
+        key_content: r.key_content,
+        impact_rating: Number(r.impact_rating)
+      };
+    }).sort(function (a, b) { return compareDate(a.event_date, b.event_date); });
+  }
+
+  function disposeCharts() {
+    window.dashboardCharts.forEach(function (c) { c.dispose(); });
+    window.dashboardCharts = [];
+  }
+
+  function registerChart(el, option) {
+    var existing = echarts.getInstanceByDom(el);
+    if (existing) existing.dispose();
+    var chart = echarts.init(el, null, { renderer: 'canvas' });
+    chart.setOption(option);
+    window.dashboardCharts.push(chart);
+    return chart;
+  }
+
+  function capacitySymbolSize(cap, minCap, maxCap) {
+    var minS = 10;
+    var maxS = 52;
+    var c = Math.max(cap, 1);
+    var log = Math.log10(c);
+    var logMin = Math.log10(Math.max(minCap, 1));
+    var logMax = Math.log10(Math.max(maxCap, 1));
+    if (logMax === logMin) return (minS + maxS) / 2;
+    return minS + ((log - logMin) / (logMax - logMin)) * (maxS - minS);
+  }
+
+  function renderBidsChart(bids, t) {
+    var el = document.getElementById('chart-bids');
+    var dates = [];
+    bids.forEach(function (r) {
+      if (dates.indexOf(r.bid_date) === -1) dates.push(r.bid_date);
+    });
+    dates.sort();
+
+    var caps = bids.map(function (r) { return r.h2_capacity_nm3h; }).filter(function (v) {
+      return !isNaN(v);
+    });
+    var minCap = Math.min.apply(null, caps);
+    var maxCap = Math.max.apply(null, caps);
+
+    var routes = TECH_ROUTES.filter(function (route) {
+      return bids.some(function (r) { return r.tech_route === route; });
+    });
+    bids.forEach(function (r) {
+      if (routes.indexOf(r.tech_route) === -1 && r.tech_route) routes.push(r.tech_route);
+    });
+
+    var series = routes.map(function (route) {
+      var color = t.routeColors[route] || t.accent;
+      return {
+        name: route,
+        type: 'scatter',
+        data: bids.filter(function (r) { return r.tech_route === route; }).map(function (r) {
+          return {
+            value: [r.bid_date, r.unit_price_kw_recalc],
+            symbolSize: capacitySymbolSize(r.h2_capacity_nm3h, minCap, maxCap),
+            project_name: r.project_name,
+            winner: r.winner,
+            capacity: r.h2_capacity_nm3h,
+            scope_type: r.scope_type
+          };
+        }),
+        itemStyle: { color: color },
+        emphasis: { focus: 'self', scale: 1.15 }
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      grid: { left: 56, right: 24, top: 48, bottom: 40 },
+      tooltip: {
+        trigger: 'item',
+        backgroundColor: t.tooltipBg,
+        borderColor: t.border,
+        textStyle: { color: t.textPrimary },
+        formatter: function (p) {
+          var d = p.data;
+          return '<b>' + escapeHtml(d.project_name) + '</b><br/>' +
+            '中标：' + escapeHtml(d.winner) + '<br/>' +
+            '路线：' + p.seriesName + '<br/>' +
+            '招标月：' + formatBidMonth(p.value[0]) + '<br/>' +
+            '单价：<b>' + formatPriceKw(p.value[1]) + '</b><br/>' +
+            '规模：' + formatCapacity(d.capacity) +
+            (d.scope_type ? '<br/>范围：' + escapeHtml(d.scope_type) : '');
+        }
+      },
+      legend: {
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 }
+      },
+      xAxis: {
+        type: 'category',
+        name: '招标日期',
+        data: dates,
+        nameTextStyle: { color: t.text },
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatBidMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '单价（元/kW）',
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function renderProjectsTable(projects) {
+    var tbody = document.getElementById('projects-body');
+    tbody.innerHTML = projects.map(function (p) {
+      var statusClass = 'status-badge status-' + (p.status || '');
+      return '<tr>' +
+        '<td>' + escapeHtml(p.project_name) + '</td>' +
+        '<td>' + escapeHtml(p.owner) + '</td>' +
+        '<td>' + escapeHtml(p.province) + '</td>' +
+        '<td>' + escapeHtml(p.product_type) + '</td>' +
+        '<td>' + escapeHtml(p.capacity_desc) + '</td>' +
+        '<td class="num">' + formatYi(p.investment_yi) + '</td>' +
+        '<td><span class="' + statusClass + '">' + escapeHtml(p.status) + '</span></td>' +
+        '</tr>';
+    }).join('');
+  }
+
+  function renderPoliciesTimeline(policies) {
+    var box = document.getElementById('policies-timeline');
+    if (!policies.length) {
+      box.innerHTML = '<div class="loading-text">暂无政策数据</div>';
+      return;
+    }
+    box.innerHTML = policies.map(function (e) {
+      var dateLabel = (e.event_date || '').slice(5);
+      return '<div class="timeline-item">' +
+        '<div class="timeline-date">' + escapeHtml(dateLabel) + '</div>' +
+        '<div class="timeline-content">' +
+        '<div class="policy-meta">' +
+        '<span class="policy-issuer">' + escapeHtml(e.issuer) + '</span>' +
+        renderStars(e.impact_rating) +
+        '</div>' +
+        '<div class="timeline-title">' + escapeHtml(e.title) + '</div>' +
+        (e.key_content ? '<div class="timeline-summary">' + escapeHtml(e.key_content) + '</div>' : '') +
+        '</div></div>';
+    }).join('');
+  }
+
+  window.initCharts = function () {
+    if (!cached.bids) return;
+    disposeCharts();
+    var t = chartTheme();
+    renderBidsChart(cached.bids, t);
+    renderProjectsTable(cached.projects);
+    renderPoliciesTimeline(cached.policies);
+  };
+
+  Promise.all([
+    fetch('data/h2_bids.json').then(function (r) {
+      if (!r.ok) throw new Error('招标数据 HTTP ' + r.status);
+      return r.json();
+    }),
+    fetch('data/h2_projects.json').then(function (r) {
+      if (!r.ok) throw new Error('项目数据 HTTP ' + r.status);
+      return r.json();
+    }),
+    fetch('data/h2_policies.json').then(function (r) {
+      if (!r.ok) throw new Error('政策数据 HTTP ' + r.status);
+      return r.json();
+    })
+  ]).then(function (res) {
+    cached.bids = normalizeBids(res[0]);
+    cached.projects = normalizeProjects(res[1]);
+    cached.policies = normalizePolicies(res[2]);
+
+    var latestBid = cached.bids.reduce(function (max, r) {
+      return !max || r.bid_date > max ? r.bid_date : max;
+    }, '');
+    var latestPolicy = cached.policies.length ? cached.policies[0].event_date : '';
+
+    document.getElementById('subtitle').textContent =
+      cached.bids.length + ' 条招标样本 · ' + cached.projects.length + ' 个项目 · ' +
+      cached.policies.length + ' 条政策 · 更新至 ' +
+      (latestPolicy || formatBidMonth(latestBid));
+
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('panels').style.display = 'block';
+    window.initCharts();
+    requestAnimationFrame(function () {
+      window.dashboardCharts.forEach(function (c) { c.resize(); });
+    });
+  }).catch(function (err) {
+    document.getElementById('loading').style.display = 'none';
+    var errorEl = document.getElementById('error');
+    errorEl.style.display = 'block';
+    errorEl.textContent = '无法加载数据：' + err.message;
+    document.getElementById('subtitle').textContent = '数据加载失败';
+  });
+
+  window.addEventListener('resize', function () {
+    window.dashboardCharts.forEach(function (c) { c.resize(); });
+  });
+})();
+</script>
+</body>
+</html>

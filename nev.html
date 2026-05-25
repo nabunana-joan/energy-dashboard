@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新能源汽车 · 新能源产业数据看板</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  .chart-box { width: 100%; }
+  #chart-top10 { height: 520px; }
+  #chart-trend { height: 440px; }
+  #chart-models { height: 720px; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="index.html" class="brand">E<span>.</span>Dashboard</a>
+    <a href="index.html" class="nav-link">概览</a>
+    <a href="nev.html" class="nav-link active">新能源汽车</a>
+    <a href="battery.html" class="nav-link">动力电池</a>
+    <a href="pv.html" class="nav-link">光伏</a>
+    <a href="h2.html" class="nav-link">氢能</a>
+    <div class="nav-spacer"></div>
+    <button class="theme-toggle" id="theme-toggle" title="切换主题">☀️</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>新能源汽车</h1>
+    <p id="subtitle">加载中…</p>
+  </div>
+
+  <div id="loading" class="loading-text">正在加载数据…</div>
+  <div id="error" class="loading-text" style="display: none; color: var(--red);"></div>
+
+  <div id="panels" style="display: none;">
+    <div class="chart-panel">
+      <div class="chart-title" id="title-top10"></div>
+      <div id="chart-top10" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title" id="title-trend"></div>
+      <div class="chart-subtitle">近 12 个月 NEV 批发销量走势</div>
+      <div id="chart-trend" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title" id="title-models"></div>
+      <div id="chart-models" class="chart-box"></div>
+    </div>
+  </div>
+</div>
+
+<script src="theme.js"></script>
+<script>
+(function () {
+  var cachedData = null;
+  window.dashboardCharts = [];
+
+  function cssVar(name) {
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  function chartTheme() {
+    return {
+      text: cssVar('--text-secondary'),
+      textMuted: cssVar('--text-tertiary'),
+      textPrimary: cssVar('--text-primary'),
+      grid: cssVar('--chart-grid'),
+      border: cssVar('--border-default'),
+      tooltipBg: cssVar('--chart-tooltip-bg'),
+      accent: cssVar('--accent'),
+      palette: [
+        cssVar('--accent'),
+        cssVar('--blue'),
+        cssVar('--orange'),
+        cssVar('--purple'),
+        cssVar('--red'),
+        cssVar('--accent'),
+        cssVar('--blue'),
+        cssVar('--orange'),
+        cssVar('--purple'),
+        cssVar('--red')
+      ]
+    };
+  }
+
+  function formatMonth(month) {
+    var parts = month.split('-');
+    return parts[0] + '年' + parseInt(parts[1], 10) + '月';
+  }
+
+  function formatMonthShort(month) {
+    return parseInt(month.split('-')[1], 10) + '月';
+  }
+
+  function formatVolume(value) {
+    return value.toLocaleString('zh-CN') + ' 辆';
+  }
+
+  function axisVolume(v) {
+    return v >= 10000 ? (v / 10000) + '万' : v;
+  }
+
+  function disposeCharts() {
+    window.dashboardCharts.forEach(function (c) { c.dispose(); });
+    window.dashboardCharts = [];
+  }
+
+  function registerChart(el, option) {
+    var existing = echarts.getInstanceByDom(el);
+    if (existing) existing.dispose();
+    var chart = echarts.init(el, null, { renderer: 'canvas' });
+    chart.setOption(option);
+    window.dashboardCharts.push(chart);
+    return chart;
+  }
+
+  function baseTooltip(t) {
+    return {
+      trigger: 'axis',
+      backgroundColor: t.tooltipBg,
+      borderColor: t.border,
+      textStyle: { color: t.textPrimary }
+    };
+  }
+
+  function renderTop10(el, json, t) {
+    var top10 = json.data
+      .slice()
+      .sort(function (a, b) { return b.sales_volume - a.sales_volume; })
+      .slice(0, 10)
+      .reverse();
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: [t.accent],
+      grid: { left: 120, right: 80, top: 16, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: function (params) {
+          var item = params[0];
+          return item.name + '<br/>批发销量：<b>' + formatVolume(item.value) + '</b>';
+        }
+      }),
+      xAxis: {
+        type: 'value',
+        name: '销量（辆）',
+        nameTextStyle: { color: t.text },
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: axisVolume },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      yAxis: {
+        type: 'category',
+        data: top10.map(function (d) { return d.company_name; }),
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: { color: t.textPrimary, fontSize: 13 }
+      },
+      series: [{
+        type: 'bar',
+        data: top10.map(function (d) { return d.sales_volume; }),
+        barMaxWidth: 28,
+        itemStyle: {
+          borderRadius: [0, 4, 4, 0],
+          color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+            { offset: 0, color: t.accent + '66' },
+            { offset: 1, color: t.accent }
+          ])
+        },
+        label: {
+          show: true,
+          position: 'right',
+          color: t.text,
+          fontSize: 12,
+          formatter: function (p) { return formatVolume(p.value); }
+        }
+      }]
+    });
+  }
+
+  function renderTrend(el, trendRows, top10Names, t) {
+    var months = [];
+    trendRows.forEach(function (r) {
+      if (months.indexOf(r.record_date) === -1) months.push(r.record_date);
+    });
+    months.sort();
+    months = months.slice(-12);
+
+    var lookup = {};
+    trendRows.forEach(function (r) {
+      if (months.indexOf(r.record_date) === -1) return;
+      if (!lookup[r.company_name]) lookup[r.company_name] = {};
+      lookup[r.company_name][r.record_date] = r.sales_volume;
+    });
+
+    var series = top10Names.map(function (name) {
+      return {
+        name: name,
+        type: 'line',
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 6,
+        lineStyle: { width: 2 },
+        data: months.map(function (m) {
+          return lookup[name] && lookup[name][m] != null ? lookup[name][m] : null;
+        })
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 48, right: 24, top: 48, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value != null) {
+              lines.push(p.marker + p.seriesName + '：' + formatVolume(p.value));
+            }
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        type: 'scroll',
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 },
+        pageTextStyle: { color: t.text },
+        pageIconColor: t.text,
+        pageIconInactiveColor: t.textMuted
+      },
+      xAxis: {
+        type: 'category',
+        data: months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '销量（辆）',
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text, formatter: axisVolume },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function barFill(color) {
+    if (/^#[0-9a-fA-F]{6}$/.test(color)) {
+      return new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+        { offset: 0, color: color + '66' },
+        { offset: 1, color: color }
+      ]);
+    }
+    return color;
+  }
+
+  function renderModels(el, json, t) {
+    var top20 = json.data
+      .map(function (item) {
+        return {
+          model_name: item.model_name,
+          sales_volume: Number(item.sales_volume)
+        };
+      })
+      .filter(function (item) { return !isNaN(item.sales_volume); })
+      .sort(function (a, b) { return b.sales_volume - a.sales_volume; })
+      .slice(0, 20)
+      .reverse();
+
+    var categories = top20.map(function (d) { return d.model_name; });
+    var barData = top20.map(function (d) { return d.sales_volume; });
+    console.log('nev TOP20 models bar data:', barData);
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      grid: { left: 100, right: 96, top: 16, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: function (params) {
+          var item = params[0];
+          return item.name + '<br/>销量：<b>' + formatVolume(item.value) + '</b>';
+        }
+      }),
+      xAxis: {
+        type: 'value',
+        name: '销量（辆）',
+        min: 0,
+        nameTextStyle: { color: t.text },
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: axisVolume },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      yAxis: {
+        type: 'category',
+        data: categories,
+        axisLine: { show: false },
+        axisTick: { show: false },
+        axisLabel: { color: t.textPrimary, fontSize: 12 }
+      },
+      series: [{
+        type: 'bar',
+        data: barData,
+        barMaxWidth: 22,
+        itemStyle: {
+          borderRadius: [0, 4, 4, 0],
+          color: barFill(t.blue)
+        },
+        label: {
+          show: true,
+          position: 'right',
+          color: t.text,
+          fontSize: 11,
+          formatter: function (p) { return formatVolume(p.value); }
+        }
+      }]
+    });
+  }
+
+  window.initCharts = function () {
+    if (!cachedData) return;
+    disposeCharts();
+    var t = chartTheme();
+    var mfr = cachedData.manufacturers;
+    var monthLabel = formatMonth(mfr.month);
+
+    renderTop10(document.getElementById('chart-top10'), mfr, t);
+    renderTrend(
+      document.getElementById('chart-trend'),
+      cachedData.trend,
+      cachedData.top10Names,
+      t
+    );
+    renderModels(document.getElementById('chart-models'), cachedData.models, t);
+  };
+
+  function loadData() {
+    return Promise.all([
+      fetch('data/nev_top_manufacturers.json').then(function (r) {
+        if (!r.ok) throw new Error('厂商数据 HTTP ' + r.status);
+        return r.json();
+      }),
+      fetch('data/nev_manufacturer_trend.json').then(function (r) {
+        if (!r.ok) throw new Error('趋势数据 HTTP ' + r.status);
+        return r.json();
+      }),
+      fetch('data/nev_top_models.json').then(function (r) {
+        if (!r.ok) throw new Error('车型数据 HTTP ' + r.status);
+        return r.json();
+      })
+    ]).then(function (res) {
+      var manufacturers = res[0];
+      var trend = res[1];
+      var models = res[2];
+      models.data = models.data.map(function (item) {
+        return {
+          model_name: item.model_name,
+          sales_volume: Number(item.sales_volume)
+        };
+      });
+      var top10Names = manufacturers.data
+        .slice()
+        .sort(function (a, b) { return b.sales_volume - a.sales_volume; })
+        .slice(0, 10)
+        .map(function (d) { return d.company_name; });
+
+      cachedData = {
+        manufacturers: manufacturers,
+        trend: trend,
+        models: models,
+        top10Names: top10Names
+      };
+
+      var monthLabel = formatMonth(manufacturers.month);
+      document.getElementById('subtitle').textContent =
+        '数据来源：NEV 批发销量 · 更新至 ' + monthLabel;
+      document.getElementById('title-top10').textContent =
+        monthLabel + ' NEV 批发销量 TOP10 厂商';
+      document.getElementById('title-trend').textContent =
+        'TOP10 厂商销量趋势（' + monthLabel + '）';
+      document.getElementById('title-models').textContent =
+        formatMonth(models.month) + ' 车型销量 TOP20';
+
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('panels').style.display = 'block';
+      window.initCharts();
+      requestAnimationFrame(function () {
+        window.dashboardCharts.forEach(function (c) { c.resize(); });
+      });
+    });
+  }
+
+  window.addEventListener('resize', function () {
+    window.dashboardCharts.forEach(function (c) { c.resize(); });
+  });
+
+  loadData().catch(function (err) {
+    document.getElementById('loading').style.display = 'none';
+    var errorEl = document.getElementById('error');
+    errorEl.style.display = 'block';
+    errorEl.textContent = '无法加载数据：' + err.message;
+    document.getElementById('subtitle').textContent = '数据加载失败';
+  });
+})();
+</script>
+</body>
+</html>
