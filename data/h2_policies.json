@@ -1,0 +1,222 @@
+[
+  {
+    "event_date": "2026-05-07",
+    "level": "国家",
+    "issuer": "国家能源局等四部门",
+    "title": "探索核电、氢能为算力设施直连供能",
+    "policy_type": "指导意见",
+    "key_content": "提高算力设施多元电力供给能力，探索氢能直连方式为算力供能",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-05-07",
+    "level": "省",
+    "issuer": "浙江省发改委",
+    "title": "浙江建设长三角氢能高速和氢走廊",
+    "policy_type": "规划",
+    "key_content": "2027年终端氢价降至25元/kg以下，FCV保有量达2000辆",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "TRAN,APPL"
+  },
+  {
+    "event_date": "2026-04-27",
+    "level": "国家",
+    "issuer": "财政部",
+    "title": "第四年度FCV示范奖励资金25.7亿元拨付",
+    "policy_type": "补贴",
+    "key_content": "广州9.3亿、郑州3.5亿、吕梁2.2亿、上海1.9亿、北京1.8亿",
+    "subsidy_detail": "25.7亿元奖补资金",
+    "impact_rating": 4,
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-15",
+    "level": "市",
+    "issuer": "广州市政府",
+    "title": "广州争取FCV推广突破10000辆",
+    "policy_type": "规划",
+    "key_content": "率先实现FCV突破万辆，推广绿色能源替代",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-10",
+    "level": "国家",
+    "issuer": "国家能源局",
+    "title": "能源领域氢能区域试点推进会",
+    "policy_type": "通知",
+    "key_content": "大胆推进氢能交易、绿色认证等机制创新",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "PROD,APPL"
+  },
+  {
+    "event_date": "2026-04-10",
+    "level": "市",
+    "issuer": "石河子市发改委",
+    "title": "新疆石河子：绿氢项目不需危化品安全生产许可",
+    "policy_type": "通知",
+    "key_content": "可再生能源电解水制氢项目不需取得危化品安全生产许可，目前最宽松政策",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-20",
+    "level": "国家",
+    "issuer": "工信部、发改委、国资委、国家能源局",
+    "title": "节能装备高质量发展实施方案（2026-2028）",
+    "policy_type": "标准",
+    "key_content": "2028年量产电解槽电耗≤4.2 kWh/Nm³，推动电极材料升级",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-15",
+    "level": "国家",
+    "issuer": "国家标准委",
+    "title": "氢冶金国家标准GB/T 47039-2026发布",
+    "policy_type": "标准",
+    "key_content": "高炉冶炼富氢系统技术要求，5月1日起实施",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-03-13",
+    "level": "国家",
+    "issuer": "工信部",
+    "title": "国家新兴产业发展示范基地遴选（含清洁低碳氢）",
+    "policy_type": "通知",
+    "key_content": "清洁低碳氢列入首批示范基地创建领域",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-12",
+    "level": "省",
+    "issuer": "四川省经信厅",
+    "title": "四川两条绿色氢路贯通",
+    "policy_type": "通知",
+    "key_content": "成德绵广、攀西雅成氢路贯通，全省氢能骨干网络初步成形",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-03-06",
+    "level": "国家",
+    "issuer": "国家发改委",
+    "title": "六大未来产业：绿色氢能和核聚变能",
+    "policy_type": "规划",
+    "key_content": "绿色氢能列为六大未来产业之一，处在技术突破'前夜'",
+    "subsidy_detail": null,
+    "impact_rating": 5,
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-05",
+    "level": "国家",
+    "issuer": "全国人大",
+    "title": "十五五规划纲要：氢能列入109项重大工程",
+    "policy_type": "规划",
+    "key_content": "绿色氢能作为新产业新赛道培育发展，列入十五五规划109项重大工程",
+    "subsidy_detail": null,
+    "impact_rating": 5,
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-03-05",
+    "level": "国家",
+    "issuer": "国务院",
+    "title": "政府工作报告：设立国家低碳转型基金培育氢能",
+    "policy_type": "规划",
+    "key_content": "设立国家低碳转型基金，培育氢能、绿色燃料等新增长点",
+    "subsidy_detail": null,
+    "impact_rating": 5,
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-03-05",
+    "level": "国家",
+    "issuer": "工信部等三部委",
+    "title": "氢能综合应用试点工作部署",
+    "policy_type": "补贴",
+    "key_content": "1+N+X场景模式，补贴封顶80亿元，15个城市群申报",
+    "subsidy_detail": "补贴总额80亿元，含FCV通用场景+工业应用+创新应用",
+    "impact_rating": 5,
+    "chain_segments": "PROD,APPL,FUEL"
+  },
+  {
+    "event_date": "2026-03-05",
+    "level": "国家",
+    "issuer": "国家能源局",
+    "title": "能源行业氢能领域标准化技术委员会成立",
+    "policy_type": "标准",
+    "key_content": "下设氢能基础与通用、制取、储运、应用4个分委会，中石化承担管理职责",
+    "subsidy_detail": null,
+    "impact_rating": 3,
+    "chain_segments": "PROD,STOR,TRAN,APPL"
+  },
+  {
+    "event_date": "2026-03-03",
+    "level": "国家",
+    "issuer": "国家能源局",
+    "title": "绿色燃料产业发展专题座谈会",
+    "policy_type": "指导意见",
+    "key_content": "首次将绿色燃料上升到能源安全战略，提出替代石油保障能源安全",
+    "subsidy_detail": null,
+    "impact_rating": 5,
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-28",
+    "level": "省",
+    "issuer": "云南省发改委",
+    "title": "云南绿氢补贴：每公斤最高13元",
+    "policy_type": "补贴",
+    "key_content": "年产绿氢100吨以上项目，投产后连续三年每公斤最高13元补贴",
+    "subsidy_detail": "13元/kg，连续3年，门槛100吨/年",
+    "impact_rating": 4,
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-02-26",
+    "level": "国家",
+    "issuer": "国家能源局新能源司",
+    "title": "推动十五五可再生能源制氢氨醇规模跃升",
+    "policy_type": "指导意见",
+    "key_content": "明确非电利用目标，推动可再生能源制氢氨醇、供热制冷",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-02-24",
+    "level": "国家",
+    "issuer": "国家能源局油气司",
+    "title": "推动油气管网与氢能新业态融合发展",
+    "policy_type": "指导意见",
+    "key_content": "兼顾绿色氢氨醇管输转型需要，推动管网与新能源融合",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-02-23",
+    "level": "国家",
+    "issuer": "国家能源局规划司",
+    "title": "布局建设风光氢氨醇一体化基地",
+    "policy_type": "规划",
+    "key_content": "加快建设重大工程项目，布局若干个风光氢氨醇一体化基地",
+    "subsidy_detail": null,
+    "impact_rating": 4,
+    "chain_segments": "PROD,FUEL"
+  }
+]

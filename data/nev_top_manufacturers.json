@@ -1,0 +1,80 @@
+{
+  "month": "2026-04",
+  "data": [
+    {
+      "company_name": "比亚迪汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 314100
+    },
+    {
+      "company_name": "吉利汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 135591
+    },
+    {
+      "company_name": "奇瑞汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 93043
+    },
+    {
+      "company_name": "特斯拉中国",
+      "metric_type": "NEV批发",
+      "sales_volume": 79478
+    },
+    {
+      "company_name": "零跑汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 71387
+    },
+    {
+      "company_name": "长安汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 46758
+    },
+    {
+      "company_name": "上汽通用五菱",
+      "metric_type": "NEV批发",
+      "sales_volume": 43990
+    },
+    {
+      "company_name": "上汽乘用车",
+      "metric_type": "NEV批发",
+      "sales_volume": 43139
+    },
+    {
+      "company_name": "广汽埃安",
+      "metric_type": "NEV批发",
+      "sales_volume": 38034
+    },
+    {
+      "company_name": "小米汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 36702
+    },
+    {
+      "company_name": "东风汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 35023
+    },
+    {
+      "company_name": "理想汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 34085
+    },
+    {
+      "company_name": "小鹏汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 31011
+    },
+    {
+      "company_name": "赛力斯汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 30168
+    },
+    {
+      "company_name": "蔚来汽车",
+      "metric_type": "NEV批发",
+      "sales_volume": 29356
+    }
+  ]
+}

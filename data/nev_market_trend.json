@@ -1,0 +1,1597 @@
+[
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV同比",
+    "value": 0.233
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 51.8
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "EREV同比",
+    "value": -0.113
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 7.3
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "HEV同比",
+    "value": 0.13
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.4
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 13.9
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 88.9
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 94.0
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 74.4
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV零售同比",
+    "value": 0.105
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "PHEV同比",
+    "value": 0.513
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 29.8
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "出口同比",
+    "value": 0.03
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 38.0
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "批发同比",
+    "value": -0.003
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 210.1
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 210.7
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "零售同比",
+    "value": -0.121
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 179.4
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV同比",
+    "value": 0.696
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 47.8
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "EREV同比",
+    "value": 0.074
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 6.3
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "HEV同比",
+    "value": 0.24
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 5.3
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 11.8
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 83.0
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 81.9
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 68.6
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV零售同比",
+    "value": 0.797
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "PHEV同比",
+    "value": 1.377
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 28.8
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "出口同比",
+    "value": 0.11
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 34.9
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "批发同比",
+    "value": 0.338
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 176.7
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 173.6
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "零售同比",
+    "value": 0.26
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 138.6
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV同比",
+    "value": 0.352
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 70.8
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "EREV同比",
+    "value": 0.26
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 8.6
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "HEV同比",
+    "value": 0.19
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 8.57
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 14.3
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 112.8
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 116.5
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 99.1
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV零售同比",
+    "value": 0.38
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "PHEV同比",
+    "value": 0.389
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 33.4
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "出口同比",
+    "value": -0.08
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 39.1
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "批发同比",
+    "value": 0.089
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 241.2
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 248.1
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "零售同比",
+    "value": 0.144
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 194.0
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV同比",
+    "value": 0.492
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 71.9
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "EREV同比",
+    "value": 0.493
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 9.2
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "HEV同比",
+    "value": 0.06
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 6.94
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 18.9
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 113.3
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 115.1
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 90.5
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV零售同比",
+    "value": 0.339
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "PHEV同比",
+    "value": 0.217
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 32.2
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "出口同比",
+    "value": -0.02
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 42.3
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "批发同比",
+    "value": 0.107
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 219.0
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 223.0
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "零售同比",
+    "value": 0.145
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 175.5
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV同比",
+    "value": 0.377
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 75.4
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "EREV同比",
+    "value": 0.467
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 12.2
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "HEV同比",
+    "value": -0.03
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.2
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 20.0
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 121.6
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 116.7
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 102.1
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV零售同比",
+    "value": 0.282
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "PHEV同比",
+    "value": 0.201
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 34.1
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "出口同比",
+    "value": 0.135
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 44.8
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "批发同比",
+    "value": 0.128
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 231.0
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 227.0
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "零售同比",
+    "value": 0.133
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 193.2
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV同比",
+    "value": 0.392
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 77.1
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "EREV同比",
+    "value": 0.136
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 12.2
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "HEV同比",
+    "value": -0.13
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 8.6
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 19.8
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 124.1
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 120.0
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 111.1
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV零售同比",
+    "value": 0.297
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "PHEV同比",
+    "value": 0.101
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 34.8
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "出口同比",
+    "value": 0.238
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 48.0
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "批发同比",
+    "value": 0.151
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 249.0
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 241.9
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "零售同比",
+    "value": 0.181
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 208.4
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV同比",
+    "value": 0.448
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 73.6
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "EREV同比",
+    "value": -0.062
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 10.9
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "HEV同比",
+    "value": -0.18
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.0
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 21.3
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 118.1
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 114.7
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 98.7
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV零售同比",
+    "value": 0.12
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "PHEV同比",
+    "value": 0.033
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 33.6
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "出口同比",
+    "value": 0.25
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 47.5
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "批发同比",
+    "value": 0.13
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 222.1
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 222.9
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "零售同比",
+    "value": 0.063
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 182.6
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV同比",
+    "value": 0.385
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 81.5
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "EREV同比",
+    "value": -0.095
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 9.9
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "HEV同比",
+    "value": -0.16
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.0
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 20.4
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 128.2
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 125.6
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 110.1
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV零售同比",
+    "value": 0.075
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "PHEV同比",
+    "value": 0.05
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 36.8
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "出口同比",
+    "value": 0.202
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 49.9
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "批发同比",
+    "value": 0.145
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 245.8
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 240.6
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "零售同比",
+    "value": 0.046
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 199.5
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV同比",
+    "value": 0.324
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 94.7
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "EREV同比",
+    "value": 0.087
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 12.9
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "HEV同比",
+    "value": -0.07
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 8.2
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 21.1
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 150.0
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 150.1
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 129.6
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV零售同比",
+    "value": 0.155
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "PHEV同比",
+    "value": 0.084
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 42.4
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "出口同比",
+    "value": 0.207
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 52.8
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "批发同比",
+    "value": 0.124
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 280.3
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 283.8
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "零售同比",
+    "value": 0.063
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 224.1
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV同比",
+    "value": 0.316
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 102.0
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "EREV同比",
+    "value": -0.019
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 12.1
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "HEV同比",
+    "value": -0.04
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 8.9
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 25.1
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 162.1
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 165.7
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 128.2
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV零售同比",
+    "value": 0.073
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "PHEV同比",
+    "value": 0.02
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 48.0
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "出口同比",
+    "value": 0.277
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 56.8
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "批发同比",
+    "value": 0.076
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 293.2
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 295.1
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "零售同比",
+    "value": -0.008
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 224.2
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV同比",
+    "value": 0.25
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 103.8
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "EREV同比",
+    "value": 0.03
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 13.7
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "HEV同比",
+    "value": -0.15
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 8.7
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 28.4
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 170.6
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 175.7
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 132.1
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV零售同比",
+    "value": 0.042
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "PHEV同比",
+    "value": 0.122
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 53.2
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "出口同比",
+    "value": 0.524
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 60.1
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "批发同比",
+    "value": 0.023
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 299.8
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 310.6
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "零售同比",
+    "value": -0.081
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 222.5
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV同比",
+    "value": 0.058
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 94.0
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "EREV同比",
+    "value": 0.134
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 14.7
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "HEV同比",
+    "value": -0.18
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 9.0
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 27.3
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 156.3
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 156.0
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 133.7
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV零售同比",
+    "value": 0.026
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "PHEV同比",
+    "value": -0.038
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "出口同比",
+    "value": 0.462
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 58.8
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "批发同比",
+    "value": -0.09
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 278.9
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 279.1
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "零售同比",
+    "value": -0.14
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 226.1
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV同比",
+    "value": -0.03
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 50.7
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "EREV同比",
+    "value": 0.067
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 7.9
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "HEV同比",
+    "value": 0.002
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.4
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 28.6
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 86.4
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 93.8
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 59.6
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV零售同比",
+    "value": -0.2
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "PHEV同比",
+    "value": -0.063
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 27.8
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "出口同比",
+    "value": 0.52
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 57.6
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "批发同比",
+    "value": -0.062
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 197.3
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 200.3
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "零售同比",
+    "value": -0.139
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 154.4
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV同比",
+    "value": -0.122
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 42.1
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "EREV同比",
+    "value": -0.201
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 5.5
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "HEV同比",
+    "value": -0.034
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 5.2
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 26.9
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 72.3
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 64.5
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 46.4
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV零售同比",
+    "value": -0.32
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "PHEV同比",
+    "value": -0.129
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 24.6
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "出口同比",
+    "value": 0.56
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 55.5
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "批发同比",
+    "value": -0.143
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 151.8
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 137.3
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "零售同比",
+    "value": -0.254
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 103.4
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV同比",
+    "value": -0.02
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 69.5
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "EREV同比",
+    "value": 0.077
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 9.6
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "HEV同比",
+    "value": 0.17
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 10.2
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 34.9
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 114.4
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 112.3
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 84.8
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV零售同比",
+    "value": -0.144
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "PHEV同比",
+    "value": 0.061
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 35.2
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "出口同比",
+    "value": 0.743
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 69.5
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "批发同比",
+    "value": -0.016
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 237.8
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 236.4
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "零售同比",
+    "value": -0.15
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 164.8
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV同比",
+    "value": 0.07
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV批发\n(万辆)",
+    "value": 77.6
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "EREV同比",
+    "value": -0.091
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "EREV批发\n(万辆)",
+    "value": 8.7
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "HEV同比",
+    "value": 0.02
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "HEV批发\n(万辆)",
+    "value": 7.2
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV出口\n(万辆)",
+    "value": 40.6
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV批发\n(万辆)",
+    "value": 122.5
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV生产\n(万辆)",
+    "value": 120.9
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV零售\n(万辆)",
+    "value": 84.9
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV零售同比",
+    "value": -0.068
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "PHEV同比",
+    "value": 0.137
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "PHEV批发\n(万辆)",
+    "value": 36.2
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "出口同比",
+    "value": 0.807
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "出口总量\n(万辆)",
+    "value": 76.9
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "批发同比",
+    "value": -0.04
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "批发总量\n(万辆)",
+    "value": 211.0
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "生产总量\n(万辆)",
+    "value": 219.3
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "零售同比",
+    "value": -0.215
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "零售总量\n(万辆)",
+    "value": 138.4
+  }
+]

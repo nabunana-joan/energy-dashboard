@@ -1,0 +1,515 @@
+{
+  "nev_monthly": [
+    {
+      "record_date": "2026-04",
+      "total_volume": 1138430,
+      "brand_count": 20
+    },
+    {
+      "record_date": "2026-03",
+      "total_volume": 1051724,
+      "brand_count": 19
+    },
+    {
+      "record_date": "2026-02",
+      "total_volume": 656962,
+      "brand_count": 16
+    },
+    {
+      "record_date": "2026-01",
+      "total_volume": 781686,
+      "brand_count": 16
+    },
+    {
+      "record_date": "2025-12",
+      "total_volume": 1481155,
+      "brand_count": 24
+    },
+    {
+      "record_date": "2025-11",
+      "total_volume": 1607611,
+      "brand_count": 22
+    },
+    {
+      "record_date": "2025-10",
+      "total_volume": 1523049,
+      "brand_count": 21
+    },
+    {
+      "record_date": "2025-09",
+      "total_volume": 1389659,
+      "brand_count": 20
+    },
+    {
+      "record_date": "2025-08",
+      "total_volume": 1197851,
+      "brand_count": 21
+    },
+    {
+      "record_date": "2025-07",
+      "total_volume": 1087895,
+      "brand_count": 19
+    },
+    {
+      "record_date": "2025-06",
+      "total_volume": 1132656,
+      "brand_count": 18
+    },
+    {
+      "record_date": "2025-05",
+      "total_volume": 1114356,
+      "brand_count": 18
+    }
+  ],
+  "battery_trend": [
+    {
+      "record_date": "2025-01",
+      "subcategory": "动力和储能/其他合计",
+      "value": 107.8,
+      "yoy": 0.632,
+      "mom": -0.134
+    },
+    {
+      "record_date": "2025-01",
+      "subcategory": "动力电池合计",
+      "value": 38.8,
+      "yoy": 0.201,
+      "mom": -0.486
+    },
+    {
+      "record_date": "2025-02",
+      "subcategory": "动力和储能/其他合计",
+      "value": 100.3,
+      "yoy": 1.282,
+      "mom": -0.07
+    },
+    {
+      "record_date": "2025-02",
+      "subcategory": "动力电池合计",
+      "value": 34.9,
+      "yoy": 0.941,
+      "mom": -0.101
+    },
+    {
+      "record_date": "2025-03",
+      "subcategory": "动力和储能/其他合计",
+      "value": 118.3,
+      "yoy": 0.543,
+      "mom": 0.18
+    },
+    {
+      "record_date": "2025-03",
+      "subcategory": "动力电池合计",
+      "value": 56.6,
+      "yoy": 0.618,
+      "mom": 0.623
+    },
+    {
+      "record_date": "2025-04",
+      "subcategory": "动力和储能/其他合计",
+      "value": 118.2,
+      "yoy": 0.49,
+      "mom": -0.0003
+    },
+    {
+      "record_date": "2025-04",
+      "subcategory": "动力电池合计",
+      "value": 54.1,
+      "yoy": 0.528,
+      "mom": -0.043
+    },
+    {
+      "record_date": "2025-05",
+      "subcategory": "动力和储能/其他合计",
+      "value": 123.5,
+      "yoy": 0.479,
+      "mom": 0.044
+    },
+    {
+      "record_date": "2025-05",
+      "subcategory": "动力电池合计",
+      "value": 57.1,
+      "yoy": 0.431,
+      "mom": 0.055
+    },
+    {
+      "record_date": "2025-06",
+      "subcategory": "动力和储能/其他合计",
+      "value": 129.2,
+      "yoy": 0.514,
+      "mom": 0.046
+    },
+    {
+      "record_date": "2025-06",
+      "subcategory": "动力电池合计",
+      "value": 58.2,
+      "yoy": 0.359,
+      "mom": 0.019
+    },
+    {
+      "record_date": "2025-07",
+      "subcategory": "动力和储能/其他合计",
+      "value": 133.8,
+      "yoy": 0.443,
+      "mom": 0.036
+    },
+    {
+      "record_date": "2025-07",
+      "subcategory": "动力电池合计",
+      "value": 55.9,
+      "yoy": 0.343,
+      "mom": -0.04
+    },
+    {
+      "record_date": "2025-08",
+      "subcategory": "动力和储能/其他合计",
+      "value": 139.6,
+      "yoy": 0.373,
+      "mom": 0.044
+    },
+    {
+      "record_date": "2025-08",
+      "subcategory": "动力电池合计",
+      "value": 62.5,
+      "yoy": 0.324,
+      "mom": 0.119
+    },
+    {
+      "record_date": "2025-09",
+      "subcategory": "动力和储能/其他合计",
+      "value": 151.2,
+      "yoy": 0.354,
+      "mom": 0.083
+    },
+    {
+      "record_date": "2025-09",
+      "subcategory": "动力电池合计",
+      "value": 76.0,
+      "yoy": 0.395,
+      "mom": 0.216
+    },
+    {
+      "record_date": "2025-10",
+      "subcategory": "动力和储能/其他合计",
+      "value": 170.6,
+      "yoy": 0.505,
+      "mom": 0.129
+    },
+    {
+      "record_date": "2025-10",
+      "subcategory": "动力电池合计",
+      "value": 84.1,
+      "yoy": 0.421,
+      "mom": 0.107
+    },
+    {
+      "record_date": "2025-11",
+      "subcategory": "动力和储能/其他合计",
+      "value": 176.3,
+      "yoy": 0.492,
+      "mom": 0.033
+    },
+    {
+      "record_date": "2025-11",
+      "subcategory": "动力电池合计",
+      "value": 93.5,
+      "yoy": 0.392,
+      "mom": 0.112
+    },
+    {
+      "record_date": "2025-12",
+      "subcategory": "动力和储能/其他合计",
+      "value": 201.7,
+      "yoy": 0.621,
+      "mom": 0.144
+    },
+    {
+      "record_date": "2025-12",
+      "subcategory": "动力电池合计",
+      "value": 98.1,
+      "yoy": 0.351,
+      "mom": 0.049
+    },
+    {
+      "record_date": "2026-01",
+      "subcategory": "动力和储能/其他合计",
+      "value": 168.0,
+      "yoy": 0.559,
+      "mom": -0.167
+    },
+    {
+      "record_date": "2026-01",
+      "subcategory": "动力电池合计",
+      "value": 42.0,
+      "yoy": 0.084,
+      "mom": -0.572
+    },
+    {
+      "record_date": "2026-02",
+      "subcategory": "动力和储能/其他合计",
+      "value": 141.6,
+      "yoy": 0.413,
+      "mom": -0.157
+    },
+    {
+      "record_date": "2026-02",
+      "subcategory": "动力电池合计",
+      "value": 26.3,
+      "yoy": -0.246,
+      "mom": -0.374
+    },
+    {
+      "record_date": "2026-03",
+      "subcategory": "动力和储能/其他合计",
+      "value": 177.7,
+      "yoy": 0.502,
+      "mom": 0.255
+    },
+    {
+      "record_date": "2026-03",
+      "subcategory": "动力电池合计",
+      "value": 56.5,
+      "yoy": -0.001,
+      "mom": 1.149
+    }
+  ],
+  "h2_project_status": [
+    {
+      "status": "在建",
+      "count": 9,
+      "total_investment": 122.91
+    },
+    {
+      "status": "备案",
+      "count": 4,
+      "total_investment": 64.58
+    },
+    {
+      "status": "投产",
+      "count": 1,
+      "total_investment": 0
+    },
+    {
+      "status": "招标",
+      "count": 8,
+      "total_investment": 0
+    },
+    {
+      "status": "规划",
+      "count": 7,
+      "total_investment": 80.0
+    }
+  ],
+  "recent_events": [
+    {
+      "event_date": "2026-05-09",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "金风兴安盟绿色甲醇项目一期首批并网发电",
+      "summary": "年发电量约7.3亿度，80%用于制氢和绿色甲醇生产"
+    },
+    {
+      "event_date": "2026-05-07",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "四部门提出探索核电、氢能为算力设施供能",
+      "summary": "氢能+算力场景，类似美国Bloom Energy模式，中国'算电协同'历史性机遇"
+    },
+    {
+      "event_date": "2026-05-07",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "浙江提出建设长三角氢能高速和氢走廊",
+      "summary": "2027年终端用氢价格降至25元/kg以下，FCV保有量达2000辆"
+    },
+    {
+      "event_date": "2026-05-05",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "东莞与怡斯莱签约超100亿港元SAF产业链",
+      "summary": "5-10年投资超100亿港元，年产约45万吨SAF+HVO"
+    },
+    {
+      "event_date": "2026-05-01",
+      "industry_id": "H2",
+      "category": "TECH",
+      "title": "荣程新能4辆液氢重卡交付，配套液氢加氢站投运",
+      "summary": "单次加氢续航1000公里，适配长途干线运输"
+    },
+    {
+      "event_date": "2026-04-30",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "中集湛江绿色甲醇项目扩产20万吨",
+      "summary": "总投资18.44亿元，采用生物质气化+天然气转化耦合路线"
+    },
+    {
+      "event_date": "2026-04-29",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "包头15万吨绿氢制e-SAF项目获备案",
+      "summary": "总投资18亿元，明拓资源投建，2027年开工、2029年建成"
+    },
+    {
+      "event_date": "2026-04-28",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "霍尼韦尔与康乃尔合作吉林30万吨SAF项目",
+      "summary": "以绿色甲醇为原料，采用UOP eFining工艺，改造现有甲醇制烯烃装置"
+    },
+    {
+      "event_date": "2026-04-27",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "财政部公示第四年度FCV示范奖励资金25.7亿元",
+      "summary": "广州9.3亿、郑州3.5亿、吕梁2.2亿、上海1.9亿、北京1.8亿排前五，预示新一轮试点即将启动"
+    },
+    {
+      "event_date": "2026-04-15",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "15个城市群提交氢能综合试点申报材料",
+      "summary": "4月15日申报截止，预期京津冀、长三角、大湾区、成渝等获批"
+    },
+    {
+      "event_date": "2026-04-15",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "广州争取率先实现FCV推广突破10000辆",
+      "summary": "广州市营商环境三十条提出，力争2026年推广氢能重卡6000台"
+    },
+    {
+      "event_date": "2026-04-15",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "中国船级社发布两项氨燃料加注指南",
+      "summary": "填补国内氨燃料水上加注船舶设计和作业操作规范空白"
+    },
+    {
+      "event_date": "2026-04-12",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "中俄氢走廊战略合作备忘录签约",
+      "summary": "氢通能源集团与俄方代表在上海签署合作备忘录"
+    },
+    {
+      "event_date": "2026-04-11",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "新闻联播报道：我国氢能产业加速打开万亿新空间",
+      "summary": "十五五规划提出推动氢能成为新增长点，氢能试点申报截止4月15日"
+    },
+    {
+      "event_date": "2026-04-10",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "新疆石河子：绿氢项目不需危化品安全生产许可",
+      "summary": "明确可再生能源电解水制氢项目不需要取得危化品安全生产许可，目前最宽松政策"
+    },
+    {
+      "event_date": "2026-04-10",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "中能建沈阳绿色醇油项目一期正式开工",
+      "summary": "总投资21.2亿元，10万吨绿色甲醇，建设周期24个月"
+    },
+    {
+      "event_date": "2026-04-10",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "嘉泽新能源鸡西30万吨绿氢醇航油项目开工",
+      "summary": "总投资35.57亿元，一期年产24万吨绿醇+8万吨乙醇或5万吨SAF"
+    },
+    {
+      "event_date": "2026-04-10",
+      "industry_id": "H2",
+      "category": "POLICY",
+      "title": "国家能源局召开氢能区域试点推进会",
+      "summary": "副局长宋宏坤提出加速制度改革、大胆推进氢能交易和绿色认证机制创新"
+    },
+    {
+      "event_date": "2026-04-09",
+      "industry_id": "H2",
+      "category": "TECH",
+      "title": "宝马发布iX5氢燃料电池车扁平化储氢系统",
+      "summary": "7个高压碳纤维罐并联集成，储氢≥7kg，5分钟加满，计划2028年上市"
+    },
+    {
+      "event_date": "2026-04-04",
+      "industry_id": "H2",
+      "category": "TECH",
+      "title": "兆瓦级氢燃料航空涡桨发动机试飞成功（新闻联播）",
+      "summary": "中国航发AEP100配装7.5吨级无人运输机首飞，飞行16分钟、36公里，全球首次"
+    },
+    {
+      "event_date": "2026-04-03",
+      "industry_id": "H2",
+      "category": "TECH",
+      "title": "丰田宣布2029年量产5MW PEM电解槽",
+      "summary": "基于Mirai燃料电池技术开发，计划2030年前产能提升至约3GW/年"
+    },
+    {
+      "event_date": "2026-04-03",
+      "industry_id": "H2",
+      "category": "COMPANY",
+      "title": "浙江蓝能终止IPO辅导",
+      "summary": "盈利压力与A股审核矛盾，除亿华通外氢能拟上市公司A股IPO全军覆没"
+    },
+    {
+      "event_date": "2026-04-01",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "新疆塔城13.5GW光伏制氢耦合煤化工甲醇项目启动",
+      "summary": "中科院李灿团队液态阳光技术，年产360万吨甲醇，配套13.5GW光伏"
+    },
+    {
+      "event_date": "2026-04-01",
+      "industry_id": "H2",
+      "category": "COMPANY",
+      "title": "宇通独家战投碱槽隔膜公司元泰能材",
+      "summary": "元泰能材完成天使+轮融资，已实现复合隔膜量产"
+    },
+    {
+      "event_date": "2026-04-01",
+      "industry_id": "H2",
+      "category": "COMPANY",
+      "title": "氢辉能源完成Pre-B轮融资",
+      "summary": "深圳储能基金独家战略投资，用于全球化市场拓展"
+    },
+    {
+      "event_date": "2026-03-30",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "安捷楚道与东风签约推进1500台氢能重卡",
+      "summary": "首批20辆5月底交付，涵盖牵引车、载货车、渣土车等"
+    },
+    {
+      "event_date": "2026-03-28",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "郑州300台氢能冷链轻卡投运",
+      "summary": "未势能源与宇通合作，覆盖河南18地市102个县冷链运输"
+    },
+    {
+      "event_date": "2026-03-25",
+      "industry_id": "H2",
+      "category": "MARKET",
+      "title": "北京氢能展观察：523家展商但同质化严重",
+      "summary": "碱槽企业参数大同小异，不少同时展出PEM/AEM；央国企展位主导，创业企业生存空间收窄"
+    },
+    {
+      "event_date": "2026-03-25",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "韩国三星签署30亿美元全球最大绿氨采购协议",
+      "summary": "印度信实工业与三星物产签15年绿氨购销协议，2029年起供应"
+    },
+    {
+      "event_date": "2026-03-25",
+      "industry_id": "H2",
+      "category": "PROJECT",
+      "title": "天津赛泓环境10万吨绿色甲醇项目开工",
+      "summary": "利用芦竹为原料，实现负碳排放，计划2027年5月竣工"
+    }
+  ]
+}

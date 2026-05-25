@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新能源产业数据看板</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #0f1419;
+    color: #e8eaed;
+    min-height: 100vh;
+    padding: 32px 24px;
+  }
+
+  .header {
+    max-width: 960px;
+    margin: 0 auto 24px;
+  }
+
+  .header h1 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #f0f2f5;
+    letter-spacing: 0.02em;
+  }
+
+  .header p {
+    margin-top: 8px;
+    font-size: 0.875rem;
+    color: #8b949e;
+  }
+
+  .chart-container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  }
+
+  .chart-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #c9d1d9;
+    margin-bottom: 16px;
+  }
+
+  #chart {
+    width: 100%;
+    height: 520px;
+  }
+
+  .loading,
+  .error {
+    max-width: 960px;
+    margin: 48px auto;
+    text-align: center;
+    color: #8b949e;
+    font-size: 0.9375rem;
+  }
+
+  .error {
+    color: #f85149;
+  }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>新能源产业数据看板</h1>
+    <p id="subtitle">加载中…</p>
+  </div>
+  <div id="loading" class="loading">正在加载数据…</div>
+  <div id="error" class="error" style="display: none;"></div>
+  <div id="panel" class="chart-container" style="display: none;">
+    <div class="chart-title" id="chart-title"></div>
+    <div id="chart"></div>
+  </div>
+
+  <script>
+  (function () {
+    var chartEl = document.getElementById("chart");
+    var loadingEl = document.getElementById("loading");
+    var errorEl = document.getElementById("error");
+    var panelEl = document.getElementById("panel");
+    var subtitleEl = document.getElementById("subtitle");
+    var chartTitleEl = document.getElementById("chart-title");
+
+    function formatMonth(month) {
+      var parts = month.split("-");
+      return parts[0] + "年" + parseInt(parts[1], 10) + "月";
+    }
+
+    function formatVolume(value) {
+      return value.toLocaleString("zh-CN") + " 辆";
+    }
+
+    function showError(message) {
+      loadingEl.style.display = "none";
+      errorEl.style.display = "block";
+      errorEl.textContent = message;
+      subtitleEl.textContent = "数据加载失败";
+    }
+
+    fetch("data/nev_top_manufacturers.json")
+      .then(function (res) {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      })
+      .then(function (json) {
+        var top10 = json.data
+          .slice()
+          .sort(function (a, b) { return b.sales_volume - a.sales_volume; })
+          .slice(0, 10)
+          .reverse();
+
+        var names = top10.map(function (item) { return item.company_name; });
+        var values = top10.map(function (item) { return item.sales_volume; });
+        var monthLabel = formatMonth(json.month);
+
+        loadingEl.style.display = "none";
+        panelEl.style.display = "block";
+        subtitleEl.textContent = "数据来源：NEV 厂商批发销量 · 更新至 " + monthLabel;
+        chartTitleEl.textContent = monthLabel + " NEV 批发销量 TOP10 厂商";
+
+        var chart = echarts.init(chartEl, null, { renderer: "canvas" });
+
+        chart.setOption({
+          backgroundColor: "transparent",
+          grid: {
+            left: 120,
+            right: 48,
+            top: 16,
+            bottom: 32,
+            containLabel: false
+          },
+          tooltip: {
+            trigger: "axis",
+            axisPointer: { type: "shadow" },
+            backgroundColor: "#21262d",
+            borderColor: "#30363d",
+            textStyle: { color: "#e8eaed" },
+            formatter: function (params) {
+              var item = params[0];
+              return item.name + "<br/>批发销量：<b>" + formatVolume(item.value) + "</b>";
+            }
+          },
+          xAxis: {
+            type: "value",
+            name: "销量（辆）",
+            nameTextStyle: { color: "#8b949e", padding: [0, 0, 0, 8] },
+            axisLine: { lineStyle: { color: "#30363d" } },
+            axisLabel: {
+              color: "#8b949e",
+              formatter: function (v) {
+                return v >= 10000 ? (v / 10000) + "万" : v;
+              }
+            },
+            splitLine: { lineStyle: { color: "#21262d", type: "dashed" } }
+          },
+          yAxis: {
+            type: "category",
+            data: names,
+            axisLine: { show: false },
+            axisTick: { show: false },
+            axisLabel: {
+              color: "#c9d1d9",
+              fontSize: 13
+            }
+          },
+          series: [{
+            type: "bar",
+            data: values,
+            barMaxWidth: 28,
+            itemStyle: {
+              borderRadius: [0, 4, 4, 0],
+              color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+                { offset: 0, color: "#1a7f64" },
+                { offset: 1, color: "#3fb950" }
+              ])
+            },
+            label: {
+              show: true,
+              position: "right",
+              color: "#8b949e",
+              fontSize: 12,
+              formatter: function (params) {
+                return formatVolume(params.value);
+              }
+            }
+          }]
+        });
+
+        window.addEventListener("resize", function () {
+          chart.resize();
+        });
+      })
+      .catch(function (err) {
+        showError("无法加载数据：" + err.message);
+      });
+  })();
+  </script>
+</body>
+</html>

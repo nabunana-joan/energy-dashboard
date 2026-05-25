@@ -1,0 +1,363 @@
+{
+  "export_date": "2026-05-25 02:35:53",
+  "industries": [
+    {
+      "industry_id": "H2",
+      "industry_name": "氢能",
+      "description": "包含制氢、储运、加注、应用全产业链",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "NEV",
+      "industry_name": "新能源汽车",
+      "description": "含BEV/PHEV/EREV/HEV/FCEV",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "BATTERY",
+      "industry_name": "动力电池",
+      "description": "含三元、磷酸铁锂、固态电池等",
+      "parent_id": "NEV",
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "PV",
+      "industry_name": "光伏",
+      "description": "含硅料/硅片/电池片/组件/玻璃",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "ESS",
+      "industry_name": "储能",
+      "description": "含电化学储能、抽蓄、压缩空气等",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "WIND",
+      "industry_name": "风电",
+      "description": "含陆上风电、海上风电",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "ROBOT",
+      "industry_name": "具身智能机器人",
+      "description": "人形机器人及工业具身智能",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    },
+    {
+      "industry_id": "DC",
+      "industry_name": "算力中心",
+      "description": "数据中心、智算中心",
+      "parent_id": null,
+      "created_at": "2026-05-21 02:43:37"
+    }
+  ],
+  "metric_catalog": [
+    {
+      "metric_id": 21,
+      "metric_name": "动力电池_产量_动力和储能/其他合计",
+      "industry_id": "BATTERY",
+      "category": "产量",
+      "subcategory": "动力和储能/其他合计",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 22,
+      "metric_name": "动力电池_出口_储能/其他电池",
+      "industry_id": "BATTERY",
+      "category": "出口",
+      "subcategory": "储能/其他电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 23,
+      "metric_name": "动力电池_出口_动力和储能/其他合计",
+      "industry_id": "BATTERY",
+      "category": "出口",
+      "subcategory": "动力和储能/其他合计",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 24,
+      "metric_name": "动力电池_出口_动力电池",
+      "industry_id": "BATTERY",
+      "category": "出口",
+      "subcategory": "动力电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 25,
+      "metric_name": "动力电池_装车量_三元电池",
+      "industry_id": "BATTERY",
+      "category": "装车量",
+      "subcategory": "三元电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 26,
+      "metric_name": "动力电池_装车量_动力电池合计",
+      "industry_id": "BATTERY",
+      "category": "装车量",
+      "subcategory": "动力电池合计",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 27,
+      "metric_name": "动力电池_装车量_磷酸铁锂电池",
+      "industry_id": "BATTERY",
+      "category": "装车量",
+      "subcategory": "磷酸铁锂电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 28,
+      "metric_name": "动力电池_销量_储能/其他电池",
+      "industry_id": "BATTERY",
+      "category": "销量",
+      "subcategory": "储能/其他电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 29,
+      "metric_name": "动力电池_销量_动力和储能/其他合计",
+      "industry_id": "BATTERY",
+      "category": "销量",
+      "subcategory": "动力和储能/其他合计",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 30,
+      "metric_name": "动力电池_销量_动力电池",
+      "industry_id": "BATTERY",
+      "category": "销量",
+      "subcategory": "动力电池",
+      "unit": "GWh",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 1,
+      "metric_name": "零售总量\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 2,
+      "metric_name": "零售同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 3,
+      "metric_name": "批发总量\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 4,
+      "metric_name": "批发同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 5,
+      "metric_name": "生产总量\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 6,
+      "metric_name": "出口总量\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 7,
+      "metric_name": "出口同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 8,
+      "metric_name": "NEV生产\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 9,
+      "metric_name": "NEV批发\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 10,
+      "metric_name": "NEV零售\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 11,
+      "metric_name": "NEV零售同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 12,
+      "metric_name": "NEV出口\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 13,
+      "metric_name": "BEV批发\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 14,
+      "metric_name": "BEV同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 15,
+      "metric_name": "PHEV批发\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 16,
+      "metric_name": "PHEV同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 17,
+      "metric_name": "EREV批发\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 18,
+      "metric_name": "EREV同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 19,
+      "metric_name": "HEV批发\n(万辆)",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    },
+    {
+      "metric_id": 20,
+      "metric_name": "HEV同比",
+      "industry_id": "NEV",
+      "category": "市场总量",
+      "subcategory": null,
+      "unit": "万辆",
+      "frequency": "monthly"
+    }
+  ],
+  "table_counts": [
+    {
+      "t": "articles",
+      "n": 75
+    },
+    {
+      "t": "policies",
+      "n": 20
+    },
+    {
+      "t": "metric_values",
+      "n": 469
+    },
+    {
+      "t": "nev_manufacturer_sales",
+      "n": 970
+    },
+    {
+      "t": "h2_projects",
+      "n": 29
+    },
+    {
+      "t": "h2_bids",
+      "n": 22
+    },
+    {
+      "t": "pv_material_prices",
+      "n": 279
+    }
+  ]
+}

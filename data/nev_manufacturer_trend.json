@@ -1,0 +1,802 @@
+[
+  {
+    "record_date": "2025-01",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 296446
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "吉利汽车",
+    "sales_volume": 121071
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "长安汽车",
+    "sales_volume": 67803
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "特斯拉中国",
+    "sales_volume": 63238
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 55028
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 35809
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "理想汽车",
+    "sales_volume": 29927
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "零跑汽车",
+    "sales_volume": 25170
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "小米汽车",
+    "sales_volume": 22897
+  },
+  {
+    "record_date": "2025-01",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 16408
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 318233
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "吉利汽车",
+    "sales_volume": 98433
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 55319
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 40053
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "长安汽车",
+    "sales_volume": 35207
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "特斯拉中国",
+    "sales_volume": 30688
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "理想汽车",
+    "sales_volume": 26263
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "零跑汽车",
+    "sales_volume": 25287
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "小米汽车",
+    "sales_volume": 23728
+  },
+  {
+    "record_date": "2025-02",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 16504
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 371419
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "吉利汽车",
+    "sales_volume": 119696
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "特斯拉中国",
+    "sales_volume": 78828
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 71362
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "长安汽车",
+    "sales_volume": 66788
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 55604
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "零跑汽车",
+    "sales_volume": 37095
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "理想汽车",
+    "sales_volume": 36674
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "小米汽车",
+    "sales_volume": 29244
+  },
+  {
+    "record_date": "2025-03",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 15958
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 372615
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "吉利汽车",
+    "sales_volume": 125563
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 75610
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "特斯拉中国",
+    "sales_volume": 58459
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 55023
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "长安汽车",
+    "sales_volume": 54756
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "零跑汽车",
+    "sales_volume": 41039
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "理想汽车",
+    "sales_volume": 33939
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "小米汽车",
+    "sales_volume": 28585
+  },
+  {
+    "record_date": "2025-04",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 27048
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 376930
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "吉利汽车",
+    "sales_volume": 138021
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "长安汽车",
+    "sales_volume": 80909
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 62686
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "特斯拉中国",
+    "sales_volume": 61662
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 56974
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "零跑汽车",
+    "sales_volume": 45067
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "理想汽车",
+    "sales_volume": 40856
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 36372
+  },
+  {
+    "record_date": "2025-05",
+    "company_name": "小米汽车",
+    "sales_volume": 28013
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 377628
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "吉利汽车",
+    "sales_volume": 122367
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "长安汽车",
+    "sales_volume": 87458
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "特斯拉中国",
+    "sales_volume": 71599
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 66368
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 61810
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "零跑汽车",
+    "sales_volume": 48006
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 43354
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "理想汽车",
+    "sales_volume": 36279
+  },
+  {
+    "record_date": "2025-06",
+    "company_name": "小米汽车",
+    "sales_volume": 25459
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 341030
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "吉利汽车",
+    "sales_volume": 130124
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "长安汽车",
+    "sales_volume": 75925
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "特斯拉中国",
+    "sales_volume": 67886
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 62107
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 59580
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "零跑汽车",
+    "sales_volume": 50129
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 41676
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "理想汽车",
+    "sales_volume": 30731
+  },
+  {
+    "record_date": "2025-07",
+    "company_name": "小米汽车",
+    "sales_volume": 30452
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 371501
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "吉利汽车",
+    "sales_volume": 147347
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "特斯拉中国",
+    "sales_volume": 83192
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "长安汽车",
+    "sales_volume": 78953
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 58233
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "零跑汽车",
+    "sales_volume": 57066
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 56213
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 41029
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "小米汽车",
+    "sales_volume": 36396
+  },
+  {
+    "record_date": "2025-08",
+    "company_name": "理想汽车",
+    "sales_volume": 28529
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 393060
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "吉利汽车",
+    "sales_volume": 165201
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "特斯拉中国",
+    "sales_volume": 90812
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "长安汽车",
+    "sales_volume": 90072
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 88781
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 85379
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "零跑汽车",
+    "sales_volume": 66657
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "小米汽车",
+    "sales_volume": 41948
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 41271
+  },
+  {
+    "record_date": "2025-09",
+    "company_name": "理想汽车",
+    "sales_volume": 33951
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 436856
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "吉利汽车",
+    "sales_volume": 177882
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 113883
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 104945
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "长安汽车",
+    "sales_volume": 98633
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "零跑汽车",
+    "sales_volume": 70289
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "特斯拉中国",
+    "sales_volume": 61497
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 48700
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "小米汽车",
+    "sales_volume": 48654
+  },
+  {
+    "record_date": "2025-10",
+    "company_name": "理想汽车",
+    "sales_volume": 31767
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 474921
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "吉利汽车",
+    "sales_volume": 187798
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 111577
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 107812
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "长安汽车",
+    "sales_volume": 106970
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "特斯拉中国",
+    "sales_volume": 86700
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "零跑汽车",
+    "sales_volume": 70327
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 51698
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "小米汽车",
+    "sales_volume": 46249
+  },
+  {
+    "record_date": "2025-11",
+    "company_name": "理想汽车",
+    "sales_volume": 33181
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 414784
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "吉利汽车",
+    "sales_volume": 154264
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "特斯拉中国",
+    "sales_volume": 97171
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "长安汽车",
+    "sales_volume": 93986
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 81760
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 62957
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "零跑汽车",
+    "sales_volume": 60423
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 53654
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "小米汽车",
+    "sales_volume": 50212
+  },
+  {
+    "record_date": "2025-12",
+    "company_name": "理想汽车",
+    "sales_volume": 44246
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 205518
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "吉利汽车",
+    "sales_volume": 124252
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "特斯拉中国",
+    "sales_volume": 69129
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 46802
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 40200
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "小米汽车",
+    "sales_volume": 39002
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "零跑汽车",
+    "sales_volume": 32059
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "理想汽车",
+    "sales_volume": 27668
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 27625
+  },
+  {
+    "record_date": "2026-01",
+    "company_name": "长安汽车",
+    "sales_volume": 26974
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 187782
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "吉利汽车",
+    "sales_volume": 117488
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "特斯拉中国",
+    "sales_volume": 58599
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "长安汽车",
+    "sales_volume": 40886
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 36091
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "零跑汽车",
+    "sales_volume": 28067
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 26874
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "理想汽车",
+    "sales_volume": 26421
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "小米汽车",
+    "sales_volume": 20414
+  },
+  {
+    "record_date": "2026-02",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 10025
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 295693
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "吉利汽车",
+    "sales_volume": 127319
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "特斯拉中国",
+    "sales_volume": 85670
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "长安汽车",
+    "sales_volume": 75754
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 64014
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "零跑汽车",
+    "sales_volume": 50029
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "理想汽车",
+    "sales_volume": 41053
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 34662
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "小米汽车",
+    "sales_volume": 21440
+  },
+  {
+    "record_date": "2026-03",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 20012
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "比亚迪汽车",
+    "sales_volume": 314100
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "吉利汽车",
+    "sales_volume": 135591
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "奇瑞汽车",
+    "sales_volume": 93043
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "特斯拉中国",
+    "sales_volume": 79478
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "零跑汽车",
+    "sales_volume": 71387
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "长安汽车",
+    "sales_volume": 46758
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "上汽通用五菱",
+    "sales_volume": 43990
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "小米汽车",
+    "sales_volume": 36702
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "理想汽车",
+    "sales_volume": 34085
+  },
+  {
+    "record_date": "2026-04",
+    "company_name": "赛力斯汽车",
+    "sales_volume": 30168
+  }
+]

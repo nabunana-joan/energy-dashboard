@@ -1,0 +1,752 @@
+[
+  {
+    "event_date": "2026-05-09",
+    "category": "PROJECT",
+    "title": "金风兴安盟绿色甲醇项目一期首批并网发电",
+    "summary": "年发电量约7.3亿度，80%用于制氢和绿色甲醇生产",
+    "entities": "[\"金风科技\"]",
+    "key_numbers": "{\"年发电量\": \"7.3亿度\", \"绿电占比\": \"80%\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-05-07",
+    "category": "POLICY",
+    "title": "四部门提出探索核电、氢能为算力设施供能",
+    "summary": "氢能+算力场景，类似美国Bloom Energy模式，中国'算电协同'历史性机遇",
+    "entities": "[\"国家能源局\", \"发改委\", \"工信部\", \"国家数据局\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-05-07",
+    "category": "POLICY",
+    "title": "浙江提出建设长三角氢能高速和氢走廊",
+    "summary": "2027年终端用氢价格降至25元/kg以下，FCV保有量达2000辆",
+    "entities": "[\"浙江省发改委\"]",
+    "key_numbers": "{\"目标氢价\": \"25元/kg\", \"目标FCV\": \"2000辆\", \"当前FCV\": \"920辆\", \"当前氢价\": \"35-58元/kg\"}",
+    "sentiment": "neutral",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-05-05",
+    "category": "PROJECT",
+    "title": "东莞与怡斯莱签约超100亿港元SAF产业链",
+    "summary": "5-10年投资超100亿港元，年产约45万吨SAF+HVO",
+    "entities": "[\"怡斯莱\", \"东莞市政府\"]",
+    "key_numbers": "{\"总投资\": \"超100亿港元\", \"产能\": \"45万吨/年\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-05-01",
+    "category": "TECH",
+    "title": "荣程新能4辆液氢重卡交付，配套液氢加氢站投运",
+    "summary": "单次加氢续航1000公里，适配长途干线运输",
+    "entities": "[\"荣程新能\"]",
+    "key_numbers": "{\"数量\": \"4辆\", \"续航\": \"1000公里\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-30",
+    "category": "PROJECT",
+    "title": "中集湛江绿色甲醇项目扩产20万吨",
+    "summary": "总投资18.44亿元，采用生物质气化+天然气转化耦合路线",
+    "entities": "[\"中集安瑞科\"]",
+    "key_numbers": "{\"扩产规模\": \"20万吨\", \"总投资\": \"18.44亿元\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-29",
+    "category": "PROJECT",
+    "title": "包头15万吨绿氢制e-SAF项目获备案",
+    "summary": "总投资18亿元，明拓资源投建，2027年开工、2029年建成",
+    "entities": "[\"明拓资源\"]",
+    "key_numbers": "{\"总投资\": \"18亿元\", \"产能\": \"15万吨/年\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-28",
+    "category": "PROJECT",
+    "title": "霍尼韦尔与康乃尔合作吉林30万吨SAF项目",
+    "summary": "以绿色甲醇为原料，采用UOP eFining工艺，改造现有甲醇制烯烃装置",
+    "entities": "[\"霍尼韦尔\", \"吉林康乃尔\"]",
+    "key_numbers": "{\"产能\": \"30万吨SAF\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-27",
+    "category": "POLICY",
+    "title": "财政部公示第四年度FCV示范奖励资金25.7亿元",
+    "summary": "广州9.3亿、郑州3.5亿、吕梁2.2亿、上海1.9亿、北京1.8亿排前五，预示新一轮试点即将启动",
+    "entities": "[\"财政部\"]",
+    "key_numbers": "{\"奖励总额\": \"25.7亿元\", \"广州\": \"9.3亿\", \"郑州\": \"3.5亿\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-15",
+    "category": "POLICY",
+    "title": "15个城市群提交氢能综合试点申报材料",
+    "summary": "4月15日申报截止，预期京津冀、长三角、大湾区、成渝等获批",
+    "entities": "[\"工信部\"]",
+    "key_numbers": "{\"申报城市群\": \"15个\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-15",
+    "category": "POLICY",
+    "title": "广州争取率先实现FCV推广突破10000辆",
+    "summary": "广州市营商环境三十条提出，力争2026年推广氢能重卡6000台",
+    "entities": "[\"广州市政府\"]",
+    "key_numbers": "{\"目标保有量\": \"10000辆\", \"当前保有量\": \"2929辆\", \"2026目标\": \"6000台重卡\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-15",
+    "category": "POLICY",
+    "title": "中国船级社发布两项氨燃料加注指南",
+    "summary": "填补国内氨燃料水上加注船舶设计和作业操作规范空白",
+    "entities": "[\"中国船级社\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "DIST"
+  },
+  {
+    "event_date": "2026-04-12",
+    "category": "PROJECT",
+    "title": "中俄氢走廊战略合作备忘录签约",
+    "summary": "氢通能源集团与俄方代表在上海签署合作备忘录",
+    "entities": "[\"氢通能源\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-04-11",
+    "category": "POLICY",
+    "title": "新闻联播报道：我国氢能产业加速打开万亿新空间",
+    "summary": "十五五规划提出推动氢能成为新增长点，氢能试点申报截止4月15日",
+    "entities": "[]",
+    "key_numbers": "{\"试点资金\": \"80亿元\", \"申报城市群\": \"15个\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,APPL"
+  },
+  {
+    "event_date": "2026-04-10",
+    "category": "POLICY",
+    "title": "新疆石河子：绿氢项目不需危化品安全生产许可",
+    "summary": "明确可再生能源电解水制氢项目不需要取得危化品安全生产许可，目前最宽松政策",
+    "entities": "[\"石河子市发改委\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-04-10",
+    "category": "PROJECT",
+    "title": "中能建沈阳绿色醇油项目一期正式开工",
+    "summary": "总投资21.2亿元，10万吨绿色甲醇，建设周期24个月",
+    "entities": "[\"中能建\"]",
+    "key_numbers": "{\"总投资\": \"21.2亿元\", \"产能\": \"10万吨\", \"建设周期\": \"24个月\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-10",
+    "category": "PROJECT",
+    "title": "嘉泽新能源鸡西30万吨绿氢醇航油项目开工",
+    "summary": "总投资35.57亿元，一期年产24万吨绿醇+8万吨乙醇或5万吨SAF",
+    "entities": "[\"嘉泽新能源\"]",
+    "key_numbers": "{\"总投资\": \"35.57亿元\", \"产能\": \"30万吨\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-10",
+    "category": "POLICY",
+    "title": "国家能源局召开氢能区域试点推进会",
+    "summary": "副局长宋宏坤提出加速制度改革、大胆推进氢能交易和绿色认证机制创新",
+    "entities": "[\"国家能源局\", \"宋宏坤\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,APPL"
+  },
+  {
+    "event_date": "2026-04-09",
+    "category": "TECH",
+    "title": "宝马发布iX5氢燃料电池车扁平化储氢系统",
+    "summary": "7个高压碳纤维罐并联集成，储氢≥7kg，5分钟加满，计划2028年上市",
+    "entities": "[\"宝马\"]",
+    "key_numbers": "{\"续航\": \"750公里\", \"储氢量\": \"≥7kg\", \"加氢时间\": \"5分钟\", \"上市时间\": \"2028\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-04",
+    "category": "TECH",
+    "title": "兆瓦级氢燃料航空涡桨发动机试飞成功（新闻联播）",
+    "summary": "中国航发AEP100配装7.5吨级无人运输机首飞，飞行16分钟、36公里，全球首次",
+    "entities": "[\"中国航发\", \"湖南动力机械研究所\"]",
+    "key_numbers": "{\"飞行时间\": \"16分钟\", \"飞行距离\": \"36公里\", \"飞行速度\": \"220km/h\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-04-03",
+    "category": "TECH",
+    "title": "丰田宣布2029年量产5MW PEM电解槽",
+    "summary": "基于Mirai燃料电池技术开发，计划2030年前产能提升至约3GW/年",
+    "entities": "[\"丰田\", \"千代田\"]",
+    "key_numbers": "{\"单机功率\": \"5MW\", \"目标年产能\": \"3GW\", \"量产时间\": \"2029\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-04-03",
+    "category": "COMPANY",
+    "title": "浙江蓝能终止IPO辅导",
+    "summary": "盈利压力与A股审核矛盾，除亿华通外氢能拟上市公司A股IPO全军覆没",
+    "entities": "[\"浙江蓝能\"]",
+    "key_numbers": "{}",
+    "sentiment": "negative",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-04-01",
+    "category": "PROJECT",
+    "title": "新疆塔城13.5GW光伏制氢耦合煤化工甲醇项目启动",
+    "summary": "中科院李灿团队液态阳光技术，年产360万吨甲醇，配套13.5GW光伏",
+    "entities": "[\"中科液态阳光\", \"中科院李灿\"]",
+    "key_numbers": "{\"光伏装机\": \"13.5GW\", \"甲醇产能\": \"360万吨/年\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-04-01",
+    "category": "COMPANY",
+    "title": "宇通独家战投碱槽隔膜公司元泰能材",
+    "summary": "元泰能材完成天使+轮融资，已实现复合隔膜量产",
+    "entities": "[\"宇通集团\", \"元泰能材\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-04-01",
+    "category": "COMPANY",
+    "title": "氢辉能源完成Pre-B轮融资",
+    "summary": "深圳储能基金独家战略投资，用于全球化市场拓展",
+    "entities": "[\"氢辉能源\", \"深圳储能基金\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-30",
+    "category": "PROJECT",
+    "title": "安捷楚道与东风签约推进1500台氢能重卡",
+    "summary": "首批20辆5月底交付，涵盖牵引车、载货车、渣土车等",
+    "entities": "[\"安捷楚道\", \"东风汽车\"]",
+    "key_numbers": "{\"目标数量\": \"1500台\", \"首批交付\": \"20辆\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-03-28",
+    "category": "PROJECT",
+    "title": "郑州300台氢能冷链轻卡投运",
+    "summary": "未势能源与宇通合作，覆盖河南18地市102个县冷链运输",
+    "entities": "[\"未势能源\", \"宇通\", \"大河四季冷链\"]",
+    "key_numbers": "{\"投运数量\": \"300台\", \"覆盖范围\": \"18地市102县\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-03-25",
+    "category": "MARKET",
+    "title": "北京氢能展观察：523家展商但同质化严重",
+    "summary": "碱槽企业参数大同小异，不少同时展出PEM/AEM；央国企展位主导，创业企业生存空间收窄",
+    "entities": "[]",
+    "key_numbers": "{\"展商数\": \"523家\", \"参展国家\": \"18个\"}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-25",
+    "category": "PROJECT",
+    "title": "韩国三星签署30亿美元全球最大绿氨采购协议",
+    "summary": "印度信实工业与三星物产签15年绿氨购销协议，2029年起供应",
+    "entities": "[\"三星物产\", \"信实工业\"]",
+    "key_numbers": "{\"协议金额\": \"30亿美元\", \"协议期限\": \"15年\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-25",
+    "category": "PROJECT",
+    "title": "天津赛泓环境10万吨绿色甲醇项目开工",
+    "summary": "利用芦竹为原料，实现负碳排放，计划2027年5月竣工",
+    "entities": "[\"赛泓环境\"]",
+    "key_numbers": "{\"产能\": \"10万吨\", \"芦竹种植面积\": \"8万亩\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-25",
+    "category": "PROJECT",
+    "title": "中国三企获肯尼亚地热绿氨项目电解槽订单",
+    "summary": "阳光氢能16套、中车株洲8套、双良2套碱槽，一期制氢26000Nm³/h",
+    "entities": "[\"阳光氢能\", \"中车株洲\", \"双良氢能\"]",
+    "key_numbers": "{\"年产绿氨\": \"20万吨\", \"碱槽总套数\": \"26套\", \"规模\": \"26000Nm³/h\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-24",
+    "category": "COMPANY",
+    "title": "宁德时代投资电解水制氢电极企业莒纳科技",
+    "summary": "宁德时代独家战投，成为最大外部机构股东",
+    "entities": "[\"宁德时代\", \"莒纳科技\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-20",
+    "category": "POLICY",
+    "title": "四部委设定2028年电解槽能效目标≤4.2kWh/Nm³",
+    "summary": "工信部等四部委印发《节能装备高质量发展实施方案》，要求量产装备电耗≤4.2kWh/Nm³，意味着行业淘汰赛开始",
+    "entities": "[\"工信部\", \"发改委\", \"国资委\", \"国家能源局\"]",
+    "key_numbers": "{\"目标电耗\": \"≤4.2 kWh/Nm³\", \"目标年份\": \"2028\", \"当前ALK电耗\": \"4.3-4.8\", \"当前PEM电耗\": \"4.0-4.5\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-20",
+    "category": "PROJECT",
+    "title": "125公里掺氢管道固阳首站竣工验收",
+    "summary": "固阳-白云鄂博管道全长125km，具备20%掺氢功能，总投资4.94亿元",
+    "entities": "[\"陕建安装集团\"]",
+    "key_numbers": "{\"管道长度\": \"125km\", \"掺氢比例\": \"20%\", \"总投资\": \"4.94亿元\"}",
+    "sentiment": "positive",
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-03-19",
+    "category": "PROJECT",
+    "title": "华电科尔沁右翼前旗风光制氢一体化项目备案",
+    "summary": "总投资27.13亿元，风光装机500MW，制氢54000Nm³/h，年产20万吨绿色甲醇",
+    "entities": "[\"华电\"]",
+    "key_numbers": "{\"总投资\": \"27.13亿元\", \"风光装机\": \"500MW\", \"制氢规模\": \"54000Nm³/h\", \"甲醇产能\": \"20万吨/年\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-18",
+    "category": "TECH",
+    "title": "奇瑞发布全球首款25kW氨燃料SOFC发电装备",
+    "summary": "发电效率突破60%，热电联供综合效率90%，功率调节30%-100%",
+    "entities": "[\"奇瑞绿能\"]",
+    "key_numbers": "{\"功率\": \"25kW\", \"发电效率\": \"60%\", \"综合效率\": \"90%\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-03-15",
+    "category": "PROJECT",
+    "title": "中天合创内蒙古绿氢煤化工项目开工",
+    "summary": "总投资61.2亿元，耦合3万吨/年绿氢，电解槽由隆基/华电科工/青骐骥提供共48套碱槽",
+    "entities": "[\"中天合创\", \"隆基氢能\", \"华电科工\", \"青骐骥\", \"中国石化工程建设\"]",
+    "key_numbers": "{\"总投资\": \"61.2亿元\", \"绿氢产能\": \"3万吨/年\", \"碱槽数\": \"48套\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-03-15",
+    "category": "POLICY",
+    "title": "氢冶金国家标准发布，5月起实施",
+    "summary": "GB/T 47039-2026规定高炉冶炼富氢系统技术要求",
+    "entities": "[]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-03-13",
+    "category": "POLICY",
+    "title": "国家新兴产业发展示范基地遴选启动",
+    "summary": "工信部组织遴选，清洁低碳氢列入创建领域",
+    "entities": "[\"工信部\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-12",
+    "category": "OPINION",
+    "title": "两会聚焦氢能产销错配与输氢管道建设",
+    "summary": "10余位代表委员发言，聚焦绿氢'产用鸿沟'和'西氢东送'管道建设，呼声最高",
+    "entities": "[\"马永生\", \"钟宝申\", \"李东林\", \"张国强\"]",
+    "key_numbers": "{\"代表委员数\": \"10+\"}",
+    "sentiment": "neutral",
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-03-12",
+    "category": "POLICY",
+    "title": "四川两条绿色氢路正式贯通",
+    "summary": "成德绵广、攀西雅成两条氢路贯通，四川氢能骨干网络初步成形",
+    "entities": "[\"四川省经信厅\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-03-12",
+    "category": "BID",
+    "title": "电投绿能梨树项目制氢装置EPC招标",
+    "summary": "阳光氢能12台1000标方碱槽+隆基氢16台1000标方+1台2000标方碱槽，有望Q4投产",
+    "entities": "[\"国电投绿能\", \"阳光氢能\", \"隆基氢能\"]",
+    "key_numbers": "{\"碱槽总规模\": \"30000Nm³/h\"}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-03-12",
+    "category": "BID",
+    "title": "中能建沈阳10万吨绿色甲醇项目管理中标",
+    "summary": "中化商务+西南化工研究设计院联合体以2919.3万元中标",
+    "entities": "[\"中能建\", \"中化商务\", \"西南化工研究设计院\"]",
+    "key_numbers": "{\"产能\": \"10万吨\", \"投标价\": \"2919.3万元\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-11",
+    "category": "TECH",
+    "title": "我国大型固态储氢设备首次充氢状态出海",
+    "summary": "镁基固态储氢设备从上海出运至马来西亚，单罐储氢1吨，循环3000次",
+    "entities": "[]",
+    "key_numbers": "{\"储氢量\": \"1吨/罐\", \"循环寿命\": \"3000次\", \"储氢成本\": \"9.8-18.7元/kg\"}",
+    "sentiment": "positive",
+    "chain_segments": "STOR"
+  },
+  {
+    "event_date": "2026-03-10",
+    "category": "BID",
+    "title": "国电投大安绿氨项目储氢技改EPC招标",
+    "summary": "6台1850m³球罐+1台8000Nm³/h压缩机，总储氢量177600Nm³",
+    "entities": "[\"大安吉电绿氢能源\"]",
+    "key_numbers": "{\"球罐数\": \"6台\", \"总储氢量\": \"177600Nm³\"}",
+    "sentiment": "neutral",
+    "chain_segments": "STOR"
+  },
+  {
+    "event_date": "2026-03-08",
+    "category": "OPINION",
+    "title": "电解槽招投标一线调查：300万成本250万中标",
+    "summary": "碱槽价格从2023年698万暴跌至254万，低于成本价竞标成为常态，行业深陷'劣币驱逐良币'",
+    "entities": "[\"香橙会研究院\"]",
+    "key_numbers": "{\"2023年碱槽价格\": \"698万/套\", \"2025年最低价\": \"254万/套\", \"碱槽成本\": \"约600元/kW\", \"系统成本\": \"约1500元/kW\"}",
+    "sentiment": "negative",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-06",
+    "category": "POLICY",
+    "title": "发改委将绿色氢能列为六大未来产业之一",
+    "summary": "郑栅洁提出六大未来产业：量子科技、生物制造、绿色氢能和核聚变能、脑机接口、具身智能、6G",
+    "entities": "[\"国家发改委\", \"郑栅洁\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-06",
+    "category": "POLICY",
+    "title": "马永生提案建议构建'西氢东送'战略骨干通道",
+    "summary": "构建国家氢能基础设施'一张网'",
+    "entities": "[\"马永生\", \"中国石化\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "TRAN"
+  },
+  {
+    "event_date": "2026-03-06",
+    "category": "COMPANY",
+    "title": "三一氢能辟谣：持续坚定发展氢能装备业务",
+    "summary": "三一集团正式否认'退出氢能'传闻，称将聚焦电解槽、制氢系统及BOP集成",
+    "entities": "[\"三一集团\", \"三一氢能\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-06",
+    "category": "COMPANY",
+    "title": "安徽枡水科技完成超亿元A轮融资",
+    "summary": "蔚来资本领投，专注PEM/AEM电解水制氢催化剂、质子交换膜、膜电极",
+    "entities": "[\"枡水科技\", \"蔚来资本\"]",
+    "key_numbers": "{\"融资金额\": \"超亿元\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-06",
+    "category": "COMPANY",
+    "title": "蔚来资本入股海德氢能",
+    "summary": "海德明能新增蔚来资本等股东",
+    "entities": "[\"海德明能\", \"蔚来资本\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-05",
+    "category": "POLICY",
+    "title": "两会政府工作报告提出培育氢能绿色燃料新增长点",
+    "summary": "设立国家低碳转型基金，培育氢能、绿色燃料等新增长点；十五五规划109项重大工程含绿色氢能",
+    "entities": "[\"国务院\", \"李强\"]",
+    "key_numbers": "{\"试点资金\": \"80亿元\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-03-05",
+    "category": "POLICY",
+    "title": "能源行业氢能领域标准化技术委员会成立",
+    "summary": "下设4个分委会，中国石化承担管理机构职责",
+    "entities": "[\"国家能源局\", \"中国石化\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-03-05",
+    "category": "PROJECT",
+    "title": "电投绿能梨树20万吨绿色甲醇EPC招标",
+    "summary": "生物炭制备装置EPC总承包招标，标志项目进入实质建设阶段",
+    "entities": "[\"国电投绿色能源\"]",
+    "key_numbers": "{\"产能\": \"20万吨\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-05",
+    "category": "PROJECT",
+    "title": "上海港绿色甲醇单次加注3640吨创历史新高",
+    "summary": "为达飞集团轮船加注3640余吨国产绿色甲醇，累计保障27艘次",
+    "entities": "[\"上海港\", \"达飞集团\"]",
+    "key_numbers": "{\"加注量\": \"3640吨\", \"累计艘次\": \"27\"}",
+    "sentiment": "positive",
+    "chain_segments": "DIST"
+  },
+  {
+    "event_date": "2026-03-05",
+    "category": "PROJECT",
+    "title": "香港完成首次约500吨绿色甲醇加注",
+    "summary": "全国首次在锚地完成绿色甲醇加注，由中集安瑞科供应",
+    "entities": "[\"香港\", \"中集安瑞科\", \"招商轮船\"]",
+    "key_numbers": "{\"加注量\": \"500吨\"}",
+    "sentiment": "positive",
+    "chain_segments": "DIST"
+  },
+  {
+    "event_date": "2026-03-03",
+    "category": "POLICY",
+    "title": "国家能源局召开绿色燃料产业发展专题座谈会",
+    "summary": "首次将绿色燃料上升到能源安全战略，提出替代石油、保障能源安全的三个'有利于'",
+    "entities": "[\"国家能源局\", \"王宏志\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-03-02",
+    "category": "PROJECT",
+    "title": "青岛港完成2500吨绿色甲醇加注",
+    "summary": "生物甲醇产自山东省内，采用畜禽粪污厌氧发酵沼气路线",
+    "entities": "[\"青岛港\", \"中远海运\"]",
+    "key_numbers": "{\"加注量\": \"2500吨\"}",
+    "sentiment": "neutral",
+    "chain_segments": "DIST"
+  },
+  {
+    "event_date": "2026-02-28",
+    "category": "OPINION",
+    "title": "美国石油战争背景下行业呼吁提速氢能发展",
+    "summary": "美国对委内瑞拉和伊朗动武，威胁我国能源安全（石油对外依存度超70%），行业人士建议将氢能提升到国家能源安全战略高度",
+    "entities": "[\"香橙会研究院\"]",
+    "key_numbers": "{\"石油对外依存度\": \"超70%\", \"天然气对外依存度\": \"超40%\"}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-02-28",
+    "category": "PROJECT",
+    "title": "远景全球首船绿氨出海韩国乐天",
+    "summary": "从赤峰工厂出发经连云港运至韩国乐天精密化学，验证端到端全链路",
+    "entities": "[\"远景能源\", \"韩国乐天精密化学\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-28",
+    "category": "PROJECT",
+    "title": "河北30辆氢能环卫车中标公示",
+    "summary": "中联重科以3768.5万元中标16台洗扫车+14台洒水车",
+    "entities": "[\"中联重科\", \"保定高新环境\"]",
+    "key_numbers": "{\"数量\": \"30辆\", \"金额\": \"3768.5万元\"}",
+    "sentiment": "neutral",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-02-28",
+    "category": "PROJECT",
+    "title": "郑州二七区采购20台宇通氢能洗扫车",
+    "summary": "单价145万元/辆，共计2900万元，搭载重塑能源110kW系统",
+    "entities": "[\"宇通\", \"重塑能源\", \"郑州市二七区\"]",
+    "key_numbers": "{\"数量\": \"20台\", \"单价\": \"145万元/辆\", \"总额\": \"2900万元\"}",
+    "sentiment": "neutral",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-02-28",
+    "category": "POLICY",
+    "title": "云南出台绿氢补贴：每公斤最高13元",
+    "summary": "年产绿氢100吨以上项目，投产后连续三年给予每公斤最高13元补贴",
+    "entities": "[\"云南省发改委\"]",
+    "key_numbers": "{\"补贴金额\": \"13元/kg\", \"补贴年限\": \"3年\", \"门槛\": \"100吨/年\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-02-27",
+    "category": "COMPANY",
+    "title": "亿华通2025年度亏损6.28亿元",
+    "summary": "营收2.62亿元同比下降28.51%，净亏损6.28亿元同比扩大37.65%",
+    "entities": "[\"亿华通\"]",
+    "key_numbers": "{\"营收\": \"2.62亿元\", \"净亏损\": \"6.28亿元\", \"营收同比\": \"-28.51%\"}",
+    "sentiment": "negative",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-02-27",
+    "category": "PROJECT",
+    "title": "现代汽车斥资9万亿韩元布局氢能",
+    "summary": "投1万亿韩元建200MW制氢工厂（2029年竣工后扩至1GW），4000亿韩元打造AI氢能城市",
+    "entities": "[\"现代汽车\"]",
+    "key_numbers": "{\"总投资\": \"9万亿韩元(约480亿人民币)\", \"制氢规模\": \"200MW→1GW\"}",
+    "sentiment": "positive",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-02-26",
+    "category": "POLICY",
+    "title": "国家能源局三司密集为氢能发声",
+    "summary": "新能源司李创军提出推动可再生能源制氢氨醇规模跃升；油气司刘红提出推动油气管网与氢能融合；规划司任育之提出布局风光氢氨醇一体化基地",
+    "entities": "[\"国家能源局\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "PROD,FUEL"
+  },
+  {
+    "event_date": "2026-02-26",
+    "category": "PROJECT",
+    "title": "嘉泽新能源30万吨绿氢醇航油项目热电联产部分获核准",
+    "summary": "鸡东县项目配套生物质热电联产，新建3台160t/h锅炉",
+    "entities": "[\"嘉泽新能源\"]",
+    "key_numbers": "{\"产能\": \"30万吨\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-26",
+    "category": "BID",
+    "title": "希倍优206.2万中标固原彭阳PEM电解槽",
+    "summary": "苏州希倍优以206.2万元中标10Nm³/h PEM装置，低于无锡威孚220万和上海氢锐237万",
+    "entities": "[\"希倍优\", \"无锡威孚\", \"上海氢锐\"]",
+    "key_numbers": "{\"中标金额\": \"206.2万元\", \"规模\": \"10Nm³/h\"}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-02-26",
+    "category": "PROJECT",
+    "title": "中国天楹全球首单电制甲醇供货订单签约",
+    "summary": "与国际头部能源巨头签订全球首单电制甲醇供货订单，吉林辽源项目计划6月底完成调试",
+    "entities": "[\"中国天楹\"]",
+    "key_numbers": "{}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-25",
+    "category": "PROJECT",
+    "title": "中煤拟在陕西安康布局生物质绿色甲醇项目",
+    "summary": "发布绿电耦合生物质制绿色甲醇一体化项目可研编制询价",
+    "entities": "[\"中煤陕西\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-24",
+    "category": "BID",
+    "title": "陕煤榆林项目4×3000Nm³/h电解槽招标",
+    "summary": "采购4套3000Nm³/h电解槽及配套设备",
+    "entities": "[\"陕煤集团\", \"北方工程设计研究院\"]",
+    "key_numbers": "{\"规模\": \"4×3000Nm³/h\"}",
+    "sentiment": "neutral",
+    "chain_segments": "PROD"
+  },
+  {
+    "event_date": "2026-02-20",
+    "category": "TECH",
+    "title": "国内首艘甲醇单一燃料动力江海直达船首航",
+    "summary": "'创新19'轮从宁波首航，搭载自主研发CS8L21M甲醇中速发动机，90%动力零部件国产化",
+    "entities": "[\"中国船舶集团711研究所\"]",
+    "key_numbers": "{\"船长\": \"126.6米\", \"国产化率\": \"90%\"}",
+    "sentiment": "positive",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-02-13",
+    "category": "PROJECT",
+    "title": "江西心连心10万吨绿色甲醇项目备案",
+    "summary": "总投资10096万元，开工时间2026年4月，竣工2027年4月，部分依托现有煤气化装置",
+    "entities": "[\"江西心连心\", \"河南心连心\"]",
+    "key_numbers": "{\"产能\": \"10万吨/年\", \"总投资\": \"10096万元\"}",
+    "sentiment": "neutral",
+    "chain_segments": "FUEL"
+  },
+  {
+    "event_date": "2026-01-31",
+    "category": "MARKET",
+    "title": "2026年1月燃料电池汽车销量506辆",
+    "summary": "同比增长298.4%，截至1月全国FCV累计保有量39529辆",
+    "entities": "[\"香橙会\"]",
+    "key_numbers": "{\"月销量\": \"506辆\", \"同比增长\": \"298.4%\", \"累计保有量\": \"39529辆\"}",
+    "sentiment": "positive",
+    "chain_segments": "APPL"
+  },
+  {
+    "event_date": "2026-01-30",
+    "category": "COMPANY",
+    "title": "云韬氢能获A轮融资",
+    "summary": "投资方浙江华熔科技，获云韬氢能1.96%股权",
+    "entities": "[\"云韬氢能\", \"浙江华熔科技\"]",
+    "key_numbers": "{}",
+    "sentiment": "neutral",
+    "chain_segments": "APPL"
+  }
+]

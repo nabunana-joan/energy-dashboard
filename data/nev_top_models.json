@@ -1,0 +1,65 @@
+{
+  "month": "2026-04",
+  "data": [
+    {
+      "model_name": "比亚迪宋",
+      "sales_volume": 67351
+    },
+    {
+      "model_name": "Model Y",
+      "sales_volume": 52143
+    },
+    {
+      "model_name": "探索06",
+      "sales_volume": 42978
+    },
+    {
+      "model_name": "吉利星愿",
+      "sales_volume": 41938
+    },
+    {
+      "model_name": "元UP",
+      "sales_volume": 32602
+    },
+    {
+      "model_name": "瑞虎7",
+      "sales_volume": 27715
+    },
+    {
+      "model_name": "Model 3",
+      "sales_volume": 27335
+    },
+    {
+      "model_name": "比亚迪海鸥",
+      "sales_volume": 27204
+    },
+    {
+      "model_name": "小米SU7",
+      "sales_volume": 26826
+    },
+    {
+      "model_name": "缤越",
+      "sales_volume": 25609
+    },
+    {
+      "model_name": "瑞虎5X",
+      "sales_volume": 23322
+    },
+    {
+      "model_name": "比亚迪海豚",
+      "sales_volume": 21930
+    },
+    {
+      "model_name": "理想i6",
+      "sales_volume": 21024
+    },
+    {
+      "model_name": "博越",
+      "sales_volume": 20175
+    },
+    {
+      "model_name": "欧萌达5",
+      "sales_volume": 20077
+    }
+  ]
+}

@@ -1,0 +1,1202 @@
+[
+  {
+    "record_date": "2025-01",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 107.8,
+    "yoy": 0.632,
+    "mom": -0.134
+  },
+  {
+    "record_date": "2025-02",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 100.3,
+    "yoy": 1.282,
+    "mom": -0.07
+  },
+  {
+    "record_date": "2025-03",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 118.3,
+    "yoy": 0.543,
+    "mom": 0.18
+  },
+  {
+    "record_date": "2025-04",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 118.2,
+    "yoy": 0.49,
+    "mom": -0.0003
+  },
+  {
+    "record_date": "2025-05",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 123.5,
+    "yoy": 0.479,
+    "mom": 0.044
+  },
+  {
+    "record_date": "2025-06",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 129.2,
+    "yoy": 0.514,
+    "mom": 0.046
+  },
+  {
+    "record_date": "2025-07",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 133.8,
+    "yoy": 0.443,
+    "mom": 0.036
+  },
+  {
+    "record_date": "2025-08",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 139.6,
+    "yoy": 0.373,
+    "mom": 0.044
+  },
+  {
+    "record_date": "2025-09",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 151.2,
+    "yoy": 0.354,
+    "mom": 0.083
+  },
+  {
+    "record_date": "2025-10",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 170.6,
+    "yoy": 0.505,
+    "mom": 0.129
+  },
+  {
+    "record_date": "2025-11",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 176.3,
+    "yoy": 0.492,
+    "mom": 0.033
+  },
+  {
+    "record_date": "2025-12",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 201.7,
+    "yoy": 0.621,
+    "mom": 0.144
+  },
+  {
+    "record_date": "2026-01",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 168.0,
+    "yoy": 0.559,
+    "mom": -0.167
+  },
+  {
+    "record_date": "2026-02",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 141.6,
+    "yoy": 0.413,
+    "mom": -0.157
+  },
+  {
+    "record_date": "2026-03",
+    "category": "产量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 177.7,
+    "yoy": 0.502,
+    "mom": 0.255
+  },
+  {
+    "record_date": "2025-01",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 6.3,
+    "yoy": null,
+    "mom": -0.288
+  },
+  {
+    "record_date": "2025-02",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 8.3,
+    "yoy": null,
+    "mom": 0.311
+  },
+  {
+    "record_date": "2025-03",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 9.1,
+    "yoy": null,
+    "mom": 0.092
+  },
+  {
+    "record_date": "2025-04",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 7.9,
+    "yoy": null,
+    "mom": -0.134
+  },
+  {
+    "record_date": "2025-05",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 5.5,
+    "yoy": 0.087,
+    "mom": -0.299
+  },
+  {
+    "record_date": "2025-06",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 8.5,
+    "yoy": 0.352,
+    "mom": 0.547
+  },
+  {
+    "record_date": "2025-07",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 8.4,
+    "yoy": 0.174,
+    "mom": -0.009
+  },
+  {
+    "record_date": "2025-08",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 7.6,
+    "yoy": 0.056,
+    "mom": -0.104
+  },
+  {
+    "record_date": "2025-09",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 9.1,
+    "yoy": -0.005,
+    "mom": 0.203
+  },
+  {
+    "record_date": "2025-10",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 8.8,
+    "yoy": -0.132,
+    "mom": -0.033
+  },
+  {
+    "record_date": "2025-11",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 10.9,
+    "yoy": 0.153,
+    "mom": 0.244
+  },
+  {
+    "record_date": "2025-12",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 13.6,
+    "yoy": 0.522,
+    "mom": 0.239
+  },
+  {
+    "record_date": "2026-01",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 6.4,
+    "yoy": 0.014,
+    "mom": -0.526
+  },
+  {
+    "record_date": "2026-02",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 7.0,
+    "yoy": -0.155,
+    "mom": 0.093
+  },
+  {
+    "record_date": "2026-03",
+    "category": "出口",
+    "subcategory": "储能/其他电池",
+    "value": 13.8,
+    "yoy": 0.524,
+    "mom": 0.969
+  },
+  {
+    "record_date": "2025-01",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 17.5,
+    "yoy": 0.671,
+    "mom": -0.201
+  },
+  {
+    "record_date": "2025-02",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 21.1,
+    "yoy": 1.447,
+    "mom": 0.21
+  },
+  {
+    "record_date": "2025-03",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 23.0,
+    "yoy": 0.753,
+    "mom": 0.088
+  },
+  {
+    "record_date": "2025-04",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 22.3,
+    "yoy": 0.642,
+    "mom": -0.029
+  },
+  {
+    "record_date": "2025-05",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 19.0,
+    "yoy": 0.23,
+    "mom": -0.146
+  },
+  {
+    "record_date": "2025-06",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 24.4,
+    "yoy": 0.225,
+    "mom": 0.279
+  },
+  {
+    "record_date": "2025-07",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 23.2,
+    "yoy": 0.354,
+    "mom": -0.047
+  },
+  {
+    "record_date": "2025-08",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 22.6,
+    "yoy": 0.239,
+    "mom": -0.026
+  },
+  {
+    "record_date": "2025-09",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 26.7,
+    "yoy": 0.283,
+    "mom": 0.182
+  },
+  {
+    "record_date": "2025-10",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 28.2,
+    "yoy": 0.335,
+    "mom": 0.055
+  },
+  {
+    "record_date": "2025-11",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 32.2,
+    "yoy": 0.465,
+    "mom": 0.141
+  },
+  {
+    "record_date": "2025-12",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 32.6,
+    "yoy": 0.492,
+    "mom": 0.013
+  },
+  {
+    "record_date": "2026-01",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 24.1,
+    "yoy": 0.383,
+    "mom": -0.26
+  },
+  {
+    "record_date": "2026-02",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 23.9,
+    "yoy": 0.132,
+    "mom": -0.009
+  },
+  {
+    "record_date": "2026-03",
+    "category": "出口",
+    "subcategory": "动力和储能/其他合计",
+    "value": 36.1,
+    "yoy": 0.571,
+    "mom": 0.51
+  },
+  {
+    "record_date": "2025-01",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 11.1,
+    "yoy": 0.091,
+    "mom": -0.142
+  },
+  {
+    "record_date": "2025-02",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 12.8,
+    "yoy": 0.514,
+    "mom": 0.152
+  },
+  {
+    "record_date": "2025-03",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 13.9,
+    "yoy": 0.113,
+    "mom": 0.086
+  },
+  {
+    "record_date": "2025-04",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 14.5,
+    "yoy": 0.536,
+    "mom": 0.04
+  },
+  {
+    "record_date": "2025-05",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 13.5,
+    "yoy": 0.3,
+    "mom": -0.063
+  },
+  {
+    "record_date": "2025-06",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 15.8,
+    "yoy": 0.166,
+    "mom": 0.171
+  },
+  {
+    "record_date": "2025-07",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 14.8,
+    "yoy": 0.484,
+    "mom": -0.067
+  },
+  {
+    "record_date": "2025-08",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 15.1,
+    "yoy": 0.357,
+    "mom": 0.019
+  },
+  {
+    "record_date": "2025-09",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 17.6,
+    "yoy": 0.509,
+    "mom": 0.171
+  },
+  {
+    "record_date": "2025-10",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 19.4,
+    "yoy": 0.767,
+    "mom": 0.1
+  },
+  {
+    "record_date": "2025-11",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 21.2,
+    "yoy": 0.702,
+    "mom": 0.094
+  },
+  {
+    "record_date": "2025-12",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 19.0,
+    "yoy": 0.471,
+    "mom": -0.104
+  },
+  {
+    "record_date": "2026-01",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 17.7,
+    "yoy": 0.593,
+    "mom": -0.071
+  },
+  {
+    "record_date": "2026-02",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 16.9,
+    "yoy": 0.319,
+    "mom": -0.046
+  },
+  {
+    "record_date": "2026-03",
+    "category": "出口",
+    "subcategory": "动力电池",
+    "value": 22.3,
+    "yoy": 0.602,
+    "mom": 0.319
+  },
+  {
+    "record_date": "2025-01",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 8.5,
+    "yoy": -0.322,
+    "mom": -0.404
+  },
+  {
+    "record_date": "2025-02",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 6.4,
+    "yoy": -0.072,
+    "mom": -0.246
+  },
+  {
+    "record_date": "2025-03",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.0,
+    "yoy": -0.116,
+    "mom": 0.552
+  },
+  {
+    "record_date": "2025-04",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 9.3,
+    "yoy": -0.063,
+    "mom": -0.07
+  },
+  {
+    "record_date": "2025-05",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.5,
+    "yoy": 0.016,
+    "mom": 0.131
+  },
+  {
+    "record_date": "2025-06",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.7,
+    "yoy": -0.034,
+    "mom": 0.02
+  },
+  {
+    "record_date": "2025-07",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.9,
+    "yoy": -0.038,
+    "mom": 0.019
+  },
+  {
+    "record_date": "2025-08",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.9,
+    "yoy": -0.1,
+    "mom": -0.001
+  },
+  {
+    "record_date": "2025-09",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 13.8,
+    "yoy": 0.052,
+    "mom": 0.265
+  },
+  {
+    "record_date": "2025-10",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 16.5,
+    "yoy": 0.358,
+    "mom": 0.198
+  },
+  {
+    "record_date": "2025-11",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 18.2,
+    "yoy": 0.337,
+    "mom": 0.099
+  },
+  {
+    "record_date": "2025-12",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 18.2,
+    "yoy": 0.405,
+    "mom": 0.002
+  },
+  {
+    "record_date": "2026-01",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 9.4,
+    "yoy": 0.096,
+    "mom": -0.486
+  },
+  {
+    "record_date": "2026-02",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 5.7,
+    "yoy": -0.114,
+    "mom": -0.391
+  },
+  {
+    "record_date": "2026-03",
+    "category": "装车量",
+    "subcategory": "三元电池",
+    "value": 10.7,
+    "yoy": 0.073,
+    "mom": 0.881
+  },
+  {
+    "record_date": "2025-01",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 38.8,
+    "yoy": 0.201,
+    "mom": -0.486
+  },
+  {
+    "record_date": "2025-02",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 34.9,
+    "yoy": 0.941,
+    "mom": -0.101
+  },
+  {
+    "record_date": "2025-03",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 56.6,
+    "yoy": 0.618,
+    "mom": 0.623
+  },
+  {
+    "record_date": "2025-04",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 54.1,
+    "yoy": 0.528,
+    "mom": -0.043
+  },
+  {
+    "record_date": "2025-05",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 57.1,
+    "yoy": 0.431,
+    "mom": 0.055
+  },
+  {
+    "record_date": "2025-06",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 58.2,
+    "yoy": 0.359,
+    "mom": 0.019
+  },
+  {
+    "record_date": "2025-07",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 55.9,
+    "yoy": 0.343,
+    "mom": -0.04
+  },
+  {
+    "record_date": "2025-08",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 62.5,
+    "yoy": 0.324,
+    "mom": 0.119
+  },
+  {
+    "record_date": "2025-09",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 76.0,
+    "yoy": 0.395,
+    "mom": 0.216
+  },
+  {
+    "record_date": "2025-10",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 84.1,
+    "yoy": 0.421,
+    "mom": 0.107
+  },
+  {
+    "record_date": "2025-11",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 93.5,
+    "yoy": 0.392,
+    "mom": 0.112
+  },
+  {
+    "record_date": "2025-12",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 98.1,
+    "yoy": 0.351,
+    "mom": 0.049
+  },
+  {
+    "record_date": "2026-01",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 42.0,
+    "yoy": 0.084,
+    "mom": -0.572
+  },
+  {
+    "record_date": "2026-02",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 26.3,
+    "yoy": -0.246,
+    "mom": -0.374
+  },
+  {
+    "record_date": "2026-03",
+    "category": "装车量",
+    "subcategory": "动力电池合计",
+    "value": 56.5,
+    "yoy": -0.001,
+    "mom": 1.149
+  },
+  {
+    "record_date": "2025-01",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 30.2,
+    "yoy": 0.535,
+    "mom": -0.505
+  },
+  {
+    "record_date": "2025-02",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 28.4,
+    "yoy": 1.58,
+    "mom": -0.06
+  },
+  {
+    "record_date": "2025-03",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 46.6,
+    "yoy": 0.97,
+    "mom": 0.639
+  },
+  {
+    "record_date": "2025-04",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 44.8,
+    "yoy": 0.759,
+    "mom": -0.038
+  },
+  {
+    "record_date": "2025-05",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 46.5,
+    "yoy": 0.577,
+    "mom": 0.039
+  },
+  {
+    "record_date": "2025-06",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 47.4,
+    "yoy": 0.497,
+    "mom": 0.019
+  },
+  {
+    "record_date": "2025-07",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 44.9,
+    "yoy": 0.49,
+    "mom": -0.053
+  },
+  {
+    "record_date": "2025-08",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 51.6,
+    "yoy": 0.473,
+    "mom": 0.148
+  },
+  {
+    "record_date": "2025-09",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 62.2,
+    "yoy": 0.504,
+    "mom": 0.205
+  },
+  {
+    "record_date": "2025-10",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 67.5,
+    "yoy": 0.437,
+    "mom": 0.086
+  },
+  {
+    "record_date": "2025-11",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 75.3,
+    "yoy": 0.407,
+    "mom": 0.116
+  },
+  {
+    "record_date": "2025-12",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 79.8,
+    "yoy": 0.337,
+    "mom": 0.059
+  },
+  {
+    "record_date": "2026-01",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 32.7,
+    "yoy": 0.081,
+    "mom": -0.591
+  },
+  {
+    "record_date": "2026-02",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 20.6,
+    "yoy": -0.275,
+    "mom": -0.369
+  },
+  {
+    "record_date": "2026-03",
+    "category": "装车量",
+    "subcategory": "磷酸铁锂电池",
+    "value": 45.8,
+    "yoy": -0.017,
+    "mom": 1.223
+  },
+  {
+    "record_date": "2025-01",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 17.5,
+    "yoy": 1.636,
+    "mom": -0.421
+  },
+  {
+    "record_date": "2025-02",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 23.1,
+    "yoy": null,
+    "mom": 0.322
+  },
+  {
+    "record_date": "2025-03",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 28.0,
+    "yoy": 1.668,
+    "mom": 0.21
+  },
+  {
+    "record_date": "2025-04",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 31.5,
+    "yoy": 0.755,
+    "mom": 0.125
+  },
+  {
+    "record_date": "2025-05",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 36.1,
+    "yoy": 0.687,
+    "mom": 0.148
+  },
+  {
+    "record_date": "2025-06",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 37.4,
+    "yoy": 0.625,
+    "mom": 0.034
+  },
+  {
+    "record_date": "2025-07",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 36.1,
+    "yoy": 0.529,
+    "mom": -0.034
+  },
+  {
+    "record_date": "2025-08",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 35.6,
+    "yoy": 0.49,
+    "mom": -0.014
+  },
+  {
+    "record_date": "2025-09",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 36.0,
+    "yoy": 0.361,
+    "mom": 0.01
+  },
+  {
+    "record_date": "2025-10",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 41.7,
+    "yoy": 0.357,
+    "mom": 0.159
+  },
+  {
+    "record_date": "2025-11",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 45.4,
+    "yoy": 0.507,
+    "mom": 0.089
+  },
+  {
+    "record_date": "2025-12",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 55.6,
+    "yoy": 0.84,
+    "mom": 0.224
+  },
+  {
+    "record_date": "2026-01",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 46.1,
+    "yoy": 1.64,
+    "mom": -0.17
+  },
+  {
+    "record_date": "2026-02",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 38.6,
+    "yoy": 0.673,
+    "mom": -0.162
+  },
+  {
+    "record_date": "2026-03",
+    "category": "销量",
+    "subcategory": "储能/其他电池",
+    "value": 60.4,
+    "yoy": 1.159,
+    "mom": 0.562
+  },
+  {
+    "record_date": "2025-01",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 80.4,
+    "yoy": 0.408,
+    "mom": -0.365
+  },
+  {
+    "record_date": "2025-02",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 90.0,
+    "yoy": 1.407,
+    "mom": 0.12
+  },
+  {
+    "record_date": "2025-03",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 115.4,
+    "yoy": 0.649,
+    "mom": 0.283
+  },
+  {
+    "record_date": "2025-04",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 118.1,
+    "yoy": 0.735,
+    "mom": 0.023
+  },
+  {
+    "record_date": "2025-05",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 123.6,
+    "yoy": 0.581,
+    "mom": 0.047
+  },
+  {
+    "record_date": "2025-06",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 131.4,
+    "yoy": 0.417,
+    "mom": 0.063
+  },
+  {
+    "record_date": "2025-07",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 127.2,
+    "yoy": 0.478,
+    "mom": -0.032
+  },
+  {
+    "record_date": "2025-08",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 134.5,
+    "yoy": 0.456,
+    "mom": 0.057
+  },
+  {
+    "record_date": "2025-09",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 146.5,
+    "yoy": 0.422,
+    "mom": 0.09
+  },
+  {
+    "record_date": "2025-10",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 166.0,
+    "yoy": 0.508,
+    "mom": 0.133
+  },
+  {
+    "record_date": "2025-11",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 179.4,
+    "yoy": 0.522,
+    "mom": 0.081
+  },
+  {
+    "record_date": "2025-12",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 199.3,
+    "yoy": 0.575,
+    "mom": 0.111
+  },
+  {
+    "record_date": "2026-01",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 148.8,
+    "yoy": 0.851,
+    "mom": -0.254
+  },
+  {
+    "record_date": "2026-02",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 113.2,
+    "yoy": 0.257,
+    "mom": -0.239
+  },
+  {
+    "record_date": "2026-03",
+    "category": "销量",
+    "subcategory": "动力和储能/其他合计",
+    "value": 175.1,
+    "yoy": 0.516,
+    "mom": 0.547
+  },
+  {
+    "record_date": "2025-01",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 62.9,
+    "yoy": 0.246,
+    "mom": -0.347
+  },
+  {
+    "record_date": "2025-02",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 66.9,
+    "yoy": 0.988,
+    "mom": 0.064
+  },
+  {
+    "record_date": "2025-03",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 87.5,
+    "yoy": 0.469,
+    "mom": 0.307
+  },
+  {
+    "record_date": "2025-04",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 86.6,
+    "yoy": 0.728,
+    "mom": -0.01
+  },
+  {
+    "record_date": "2025-05",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 87.5,
+    "yoy": 0.541,
+    "mom": 0.01
+  },
+  {
+    "record_date": "2025-06",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 94.1,
+    "yoy": 0.349,
+    "mom": 0.076
+  },
+  {
+    "record_date": "2025-07",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 91.1,
+    "yoy": 0.458,
+    "mom": -0.031
+  },
+  {
+    "record_date": "2025-08",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 98.9,
+    "yoy": 0.444,
+    "mom": 0.085
+  },
+  {
+    "record_date": "2025-09",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 110.5,
+    "yoy": 0.444,
+    "mom": 0.118
+  },
+  {
+    "record_date": "2025-10",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 124.3,
+    "yoy": 0.566,
+    "mom": 0.124
+  },
+  {
+    "record_date": "2025-11",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 134.0,
+    "yoy": 0.527,
+    "mom": 0.078
+  },
+  {
+    "record_date": "2025-12",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 143.8,
+    "yoy": 0.492,
+    "mom": 0.073
+  },
+  {
+    "record_date": "2026-01",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 102.7,
+    "yoy": 0.632,
+    "mom": -0.286
+  },
+  {
+    "record_date": "2026-02",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 74.5,
+    "yoy": 0.114,
+    "mom": -0.274
+  },
+  {
+    "record_date": "2026-03",
+    "category": "销量",
+    "subcategory": "动力电池",
+    "value": 114.7,
+    "yoy": 0.311,
+    "mom": 0.539
+  }
+]
