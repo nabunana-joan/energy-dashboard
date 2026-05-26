@@ -1,0 +1,770 @@
+[
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV_A00级",
+    "value": 11.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV_A0级",
+    "value": 10.8,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV_A级",
+    "value": 8.9,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "BEV_B级",
+    "value": 19.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.02,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "新势力零售份额",
+    "value": 0.208,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.54,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.34,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV_A00级",
+    "value": 12.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV_A0级",
+    "value": 11.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV_A级",
+    "value": 9.8,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "BEV_B级",
+    "value": 13.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.03,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "新势力零售份额",
+    "value": 0.199,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.62,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.27,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV_A00级",
+    "value": 13.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV_A0级",
+    "value": 17.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV_A级",
+    "value": 16.8,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "BEV_B级",
+    "value": 21.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.05,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "新势力零售份额",
+    "value": 0.171,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.63,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.36,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV_A00级",
+    "value": 15.1,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV_A0级",
+    "value": 18.1,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV_A级",
+    "value": 16.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "BEV_B级",
+    "value": 20.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.07,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "新势力零售份额",
+    "value": 0.194,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.66,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.38,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV_A00级",
+    "value": 16.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV_A0级",
+    "value": 17.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV_A级",
+    "value": 17.8,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "BEV_B级",
+    "value": 22.3,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.043,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "新势力零售份额",
+    "value": 0.205,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.687,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.375,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV_A00级",
+    "value": 15.3,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV_A0级",
+    "value": 17.1,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV_A级",
+    "value": 18.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "BEV_B级",
+    "value": 23.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.066,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "新势力零售份额",
+    "value": 0.195,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.667,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.33,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV_A00级",
+    "value": 13.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV_A0级",
+    "value": 16.9,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV_A级",
+    "value": 18.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "BEV_B级",
+    "value": 23.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.066,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "新势力零售份额",
+    "value": 0.214,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.674,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.435,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV_A00级",
+    "value": 12.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV_A0级",
+    "value": 18.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV_A级",
+    "value": 21.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "BEV_B级",
+    "value": 26.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.071,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "新势力零售份额",
+    "value": 0.208,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.662,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.419,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV_A00级",
+    "value": 15.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV_A0级",
+    "value": 23.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV_A级",
+    "value": 23.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "BEV_B级",
+    "value": 28.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.066,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "新势力零售份额",
+    "value": 0.202,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.683,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.4,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV_A00级",
+    "value": 17.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV_A0级",
+    "value": 24.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV_A级",
+    "value": 25.5,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "BEV_B级",
+    "value": 30.1,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.071,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "新势力零售份额",
+    "value": 0.227,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.701,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.391,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV_A00级",
+    "value": 17.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV_A0级",
+    "value": 25.9,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV_A级",
+    "value": 27.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "BEV_B级",
+    "value": 28.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.075,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "新势力零售份额",
+    "value": 0.221,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.722,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.428,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV_A00级",
+    "value": 11.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV_A0级",
+    "value": 24.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV_A级",
+    "value": 21.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "BEV_B级",
+    "value": 30.3,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.072,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "新势力零售份额",
+    "value": 0.235,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.728,
+    "unit": "%"
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.425,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV_A00级",
+    "value": 4.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV_A0级",
+    "value": 14.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV_A级",
+    "value": 9.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "BEV_B级",
+    "value": 19.9,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.036,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "新势力零售份额",
+    "value": 0.312,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.579,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.398,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV_A00级",
+    "value": 4.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV_A0级",
+    "value": 12.2,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV_A级",
+    "value": 8.4,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "BEV_B级",
+    "value": 14.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.046,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "新势力零售份额",
+    "value": 0.273,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.589,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.482,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV_A00级",
+    "value": 6.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV_A0级",
+    "value": 18.9,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV_A级",
+    "value": 18.1,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "BEV_B级",
+    "value": 22.6,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.064,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "新势力零售份额",
+    "value": 0.215,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.617,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.433,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV_A00级",
+    "value": 7.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV_A0级",
+    "value": 21.0,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV_A级",
+    "value": 21.7,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "BEV_B级",
+    "value": 24.3,
+    "unit": "万辆"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "合资品牌NEV渗透率",
+    "value": 0.147,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "新势力零售份额",
+    "value": 0.256,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "自主品牌NEV渗透率",
+    "value": 0.676,
+    "unit": "%"
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "豪华车NEV渗透率",
+    "value": 0.487,
+    "unit": "%"
+  }
+]

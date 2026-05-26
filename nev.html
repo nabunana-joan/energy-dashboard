@@ -11,6 +11,10 @@
   #chart-top10 { height: 520px; }
   #chart-trend { height: 440px; }
   #chart-models { height: 720px; }
+  #chart-penetration,
+  #chart-powertrain,
+  #chart-brand-pct,
+  #chart-bev-level { height: 400px; }
   </style>
 </head>
 <body>
@@ -53,6 +57,32 @@
       <div class="chart-title" id="title-models"></div>
       <div id="chart-models" class="chart-box"></div>
     </div>
+
+    <div class="section-title">市场结构</div>
+
+    <div class="chart-panel">
+      <div class="chart-title">NEV 渗透率 · 月度趋势</div>
+      <div class="chart-subtitle">渗透率（%）与零售量对比（万辆）</div>
+      <div id="chart-penetration" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title">动力类型 · 批发结构</div>
+      <div class="chart-subtitle">BEV / PHEV / EREV / HEV 批发量（万辆）</div>
+      <div id="chart-powertrain" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title">品牌渗透率 · 月度趋势</div>
+      <div class="chart-subtitle">自主品牌 / 豪华车 / 合资 NEV 渗透率及新势力份额（%）</div>
+      <div id="chart-brand-pct" class="chart-box"></div>
+    </div>
+
+    <div class="chart-panel">
+      <div class="chart-title">BEV 级别结构 · 月度趋势</div>
+      <div class="chart-subtitle">A00 / A0 / A / B 级 BEV 批发量（万辆）</div>
+      <div id="chart-bev-level" class="chart-box"></div>
+    </div>
   </div>
 </div>
 
@@ -75,6 +105,8 @@
       border: cssVar('--border-default'),
       tooltipBg: cssVar('--chart-tooltip-bg'),
       accent: cssVar('--accent'),
+      blue: cssVar('--blue'),
+      orange: cssVar('--orange'),
       palette: [
         cssVar('--accent'),
         cssVar('--blue'),
@@ -105,6 +137,46 @@
 
   function axisVolume(v) {
     return v >= 10000 ? (v / 10000) + '万' : v;
+  }
+
+  function formatWan(value) {
+    return Number(value).toLocaleString('zh-CN', {
+      minimumFractionDigits: 1,
+      maximumFractionDigits: 1
+    }) + ' 万辆';
+  }
+
+  function formatPct(value) {
+    return Number(value).toFixed(1) + '%';
+  }
+
+  function areaColor(hex, alpha) {
+    if (/^#[0-9a-fA-F]{6}$/.test(hex)) return hex + alpha;
+    return hex;
+  }
+
+  function getSortedMonths(rows) {
+    var months = [];
+    rows.forEach(function (r) {
+      if (months.indexOf(r.record_date) === -1) months.push(r.record_date);
+    });
+    return months.sort();
+  }
+
+  function buildMetricLookup(rows, metricOrder) {
+    var months = getSortedMonths(rows);
+    var names = metricOrder.filter(function (name) {
+      return rows.some(function (r) { return r.metric_name === name; });
+    });
+    rows.forEach(function (r) {
+      if (names.indexOf(r.metric_name) === -1) names.push(r.metric_name);
+    });
+    var lookup = {};
+    rows.forEach(function (r) {
+      if (!lookup[r.metric_name]) lookup[r.metric_name] = {};
+      lookup[r.metric_name][r.record_date] = r.value;
+    });
+    return { months: months, metrics: names, lookup: lookup };
   }
 
   function disposeCharts() {
@@ -283,7 +355,6 @@
 
     var categories = top20.map(function (d) { return d.model_name; });
     var barData = top20.map(function (d) { return d.sales_volume; });
-    console.log('nev TOP20 models bar data:', barData);
 
     return registerChart(el, {
       backgroundColor: 'transparent',
@@ -331,6 +402,298 @@
     });
   }
 
+  function renderPenetration(el, rows, t) {
+    var months = getSortedMonths(rows);
+    var penetration = months.map(function (m) {
+      var r = rows.find(function (x) { return x.record_date === m; });
+      return r ? r.penetration_pct : null;
+    });
+    var nevRetail = months.map(function (m) {
+      var r = rows.find(function (x) { return x.record_date === m; });
+      return r ? r.nev_retail : null;
+    });
+    var totalRetail = months.map(function (m) {
+      var r = rows.find(function (x) { return x.record_date === m; });
+      return r ? r.total_retail : null;
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: [t.accent, t.blue, t.orange],
+      grid: { left: 56, right: 56, top: 48, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value == null) return;
+            if (p.seriesName === 'NEV渗透率') {
+              lines.push(p.marker + p.seriesName + '：<b>' + formatPct(p.value) + '</b>');
+            } else {
+              lines.push(p.marker + p.seriesName + '：<b>' + formatWan(p.value) + '</b>');
+            }
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 }
+      },
+      xAxis: {
+        type: 'category',
+        data: months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: [
+        {
+          type: 'value',
+          name: '零售量（万辆）',
+          nameTextStyle: { color: t.text },
+          axisLine: { show: false },
+          axisLabel: { color: t.text },
+          splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+        },
+        {
+          type: 'value',
+          name: '渗透率（%）',
+          nameTextStyle: { color: t.text },
+          axisLine: { show: false },
+          axisLabel: { color: t.text, formatter: '{value}%' },
+          splitLine: { show: false }
+        }
+      ],
+      series: [
+        {
+          name: 'NEV零售',
+          type: 'line',
+          yAxisIndex: 0,
+          smooth: true,
+          symbol: 'none',
+          lineStyle: { width: 0 },
+          areaStyle: { color: areaColor(t.accent, '33') },
+          data: nevRetail,
+          z: 1
+        },
+        {
+          name: '汽车零售',
+          type: 'line',
+          yAxisIndex: 0,
+          smooth: true,
+          symbol: 'none',
+          lineStyle: { width: 0 },
+          areaStyle: { color: areaColor(t.blue, '22') },
+          data: totalRetail,
+          z: 0
+        },
+        {
+          name: 'NEV渗透率',
+          type: 'line',
+          yAxisIndex: 1,
+          smooth: true,
+          symbol: 'circle',
+          symbolSize: 6,
+          lineStyle: { width: 2.5, color: t.orange },
+          itemStyle: { color: t.orange },
+          data: penetration,
+          z: 3
+        }
+      ]
+    });
+  }
+
+  function renderPowertrain(el, rows, t) {
+    var order = ['BEV批发', 'PHEV批发', 'EREV批发', 'HEV批发'];
+    var built = buildMetricLookup(rows, order);
+
+    var series = built.metrics.map(function (name) {
+      return {
+        name: name,
+        type: 'bar',
+        stack: 'powertrain',
+        emphasis: { focus: 'series' },
+        data: built.months.map(function (m) {
+          var v = built.lookup[name] && built.lookup[name][m];
+          return v != null && !isNaN(v) ? v : null;
+        })
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 48, right: 24, top: 48, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        axisPointer: { type: 'shadow' },
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          var total = 0;
+          params.forEach(function (p) {
+            if (p.value != null) {
+              total += p.value;
+              lines.push(p.marker + p.seriesName + '：' + formatWan(p.value));
+            }
+          });
+          lines.push('<b>合计：' + formatWan(total) + '</b>');
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 }
+      },
+      xAxis: {
+        type: 'category',
+        data: built.months,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '批发量（万辆）',
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function renderBrandPct(el, rows, t) {
+    var order = [
+      '自主品牌NEV渗透率',
+      '豪华车NEV渗透率',
+      '合资品牌NEV渗透率',
+      '新势力零售份额'
+    ];
+    var built = buildMetricLookup(rows, order);
+
+    var series = built.metrics.map(function (name) {
+      return {
+        name: name,
+        type: 'line',
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 5,
+        lineStyle: { width: 2 },
+        data: built.months.map(function (m) {
+          var v = built.lookup[name] && built.lookup[name][m];
+          return v != null && !isNaN(v) ? +(v * 100).toFixed(2) : null;
+        })
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 48, right: 24, top: 56, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          params.forEach(function (p) {
+            if (p.value != null) {
+              lines.push(p.marker + p.seriesName + '：<b>' + formatPct(p.value) + '</b>');
+            }
+          });
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        type: 'scroll',
+        top: 0,
+        textStyle: { color: t.text, fontSize: 10 },
+        pageTextStyle: { color: t.text },
+        pageIconColor: t.text,
+        pageIconInactiveColor: t.textMuted
+      },
+      xAxis: {
+        type: 'category',
+        data: built.months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '渗透率 / 份额（%）',
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text, formatter: '{value}%' },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
+  function renderBevLevel(el, rows, t) {
+    var order = ['BEV_A00级', 'BEV_A0级', 'BEV_A级', 'BEV_B级'];
+    var built = buildMetricLookup(rows, order);
+
+    var series = built.metrics.map(function (name, i) {
+      var color = t.palette[i % t.palette.length];
+      return {
+        name: name,
+        type: 'line',
+        stack: 'bev',
+        smooth: true,
+        symbol: 'none',
+        lineStyle: { width: 0 },
+        areaStyle: { color: areaColor(color, '55') },
+        emphasis: { focus: 'series' },
+        data: built.months.map(function (m) {
+          var v = built.lookup[name] && built.lookup[name][m];
+          return v != null && !isNaN(v) ? v : null;
+        })
+      };
+    });
+
+    return registerChart(el, {
+      backgroundColor: 'transparent',
+      color: t.palette,
+      grid: { left: 48, right: 24, top: 48, bottom: 32 },
+      tooltip: Object.assign(baseTooltip(t), {
+        trigger: 'axis',
+        formatter: function (params) {
+          var lines = [formatMonth(params[0].axisValue)];
+          var total = 0;
+          params.forEach(function (p) {
+            if (p.value != null) {
+              total += p.value;
+              lines.push(p.marker + p.seriesName + '：' + formatWan(p.value));
+            }
+          });
+          lines.push('<b>合计：' + formatWan(total) + '</b>');
+          return lines.join('<br/>');
+        }
+      }),
+      legend: {
+        top: 0,
+        textStyle: { color: t.text, fontSize: 11 }
+      },
+      xAxis: {
+        type: 'category',
+        data: built.months,
+        boundaryGap: false,
+        axisLine: { lineStyle: { color: t.border } },
+        axisLabel: { color: t.text, formatter: formatMonthShort }
+      },
+      yAxis: {
+        type: 'value',
+        name: '批发量（万辆）',
+        nameTextStyle: { color: t.text },
+        axisLine: { show: false },
+        axisLabel: { color: t.text },
+        splitLine: { lineStyle: { color: t.grid, type: 'dashed' } }
+      },
+      series: series
+    });
+  }
+
   window.initCharts = function () {
     if (!cachedData) return;
     disposeCharts();
@@ -346,6 +709,10 @@
       t
     );
     renderModels(document.getElementById('chart-models'), cachedData.models, t);
+    renderPenetration(document.getElementById('chart-penetration'), cachedData.penetration, t);
+    renderPowertrain(document.getElementById('chart-powertrain'), cachedData.powertrain, t);
+    renderBrandPct(document.getElementById('chart-brand-pct'), cachedData.brandPct, t);
+    renderBevLevel(document.getElementById('chart-bev-level'), cachedData.bevLevel, t);
   };
 
   function loadData() {
@@ -361,11 +728,26 @@
       fetch('data/nev_top_models.json').then(function (r) {
         if (!r.ok) throw new Error('车型数据 HTTP ' + r.status);
         return r.json();
+      }),
+      fetch('data/nev_penetration.json').then(function (r) {
+        if (!r.ok) throw new Error('渗透率数据 HTTP ' + r.status);
+        return r.json();
+      }),
+      fetch('data/nev_powertrain.json').then(function (r) {
+        if (!r.ok) throw new Error('动力类型数据 HTTP ' + r.status);
+        return r.json();
+      }),
+      fetch('data/nev_brand_structure.json').then(function (r) {
+        if (!r.ok) throw new Error('品牌结构数据 HTTP ' + r.status);
+        return r.json();
       })
     ]).then(function (res) {
       var manufacturers = res[0];
       var trend = res[1];
       var models = res[2];
+      var penetration = res[3];
+      var powertrain = res[4];
+      var brandStructure = res[5];
       models.data = models.data.map(function (item) {
         return {
           model_name: item.model_name,
@@ -382,7 +764,38 @@
         manufacturers: manufacturers,
         trend: trend,
         models: models,
-        top10Names: top10Names
+        top10Names: top10Names,
+        penetration: penetration.map(function (r) {
+          return {
+            record_date: r.record_date,
+            nev_retail: Number(r.nev_retail),
+            total_retail: Number(r.total_retail),
+            penetration_pct: Number(r.penetration_pct),
+            nev_yoy: r.nev_yoy == null ? null : Number(r.nev_yoy)
+          };
+        }),
+        powertrain: powertrain.map(function (r) {
+          return {
+            record_date: r.record_date,
+            metric_name: r.metric_name,
+            value: Number(r.value),
+            yoy: r.yoy == null ? null : Number(r.yoy)
+          };
+        }),
+        brandPct: brandStructure.filter(function (r) { return r.unit === '%'; }).map(function (r) {
+          return {
+            record_date: r.record_date,
+            metric_name: r.metric_name,
+            value: Number(r.value)
+          };
+        }),
+        bevLevel: brandStructure.filter(function (r) { return r.unit === '万辆'; }).map(function (r) {
+          return {
+            record_date: r.record_date,
+            metric_name: r.metric_name,
+            value: Number(r.value)
+          };
+        })
       };
 
       var monthLabel = formatMonth(manufacturers.month);

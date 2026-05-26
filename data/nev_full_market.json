@@ -1,0 +1,898 @@
+[
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 13.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 88.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 94.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 74.4,
+    "yoy": 0.105
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 38.0,
+    "yoy": 0.03
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 210.1,
+    "yoy": -0.003
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 210.7,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-01",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 179.4,
+    "yoy": -0.121
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 11.8,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 83.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 81.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 68.6,
+    "yoy": 0.797
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 34.9,
+    "yoy": 0.11
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 176.7,
+    "yoy": 0.338
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 173.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-02",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 138.6,
+    "yoy": 0.26
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 14.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 112.8,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 116.5,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 99.1,
+    "yoy": 0.38
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 39.1,
+    "yoy": -0.08
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 241.2,
+    "yoy": 0.089
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 248.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-03",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 194.0,
+    "yoy": 0.144
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 18.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 113.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 115.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 90.5,
+    "yoy": 0.339
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 42.3,
+    "yoy": -0.02
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 219.0,
+    "yoy": 0.107
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 223.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-04",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 175.5,
+    "yoy": 0.145
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 20.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 121.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 116.7,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 102.1,
+    "yoy": 0.282
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 44.8,
+    "yoy": 0.135
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 231.0,
+    "yoy": 0.128
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 227.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-05",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 193.2,
+    "yoy": 0.133
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 19.8,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 124.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 120.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 111.1,
+    "yoy": 0.297
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 48.0,
+    "yoy": 0.238
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 249.0,
+    "yoy": 0.151
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 241.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-06",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 208.4,
+    "yoy": 0.181
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 21.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 118.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 114.7,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 98.7,
+    "yoy": 0.12
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 47.5,
+    "yoy": 0.25
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 222.1,
+    "yoy": 0.13
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 222.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-07",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 182.6,
+    "yoy": 0.063
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 20.4,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 128.2,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 125.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 110.1,
+    "yoy": 0.075
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 49.9,
+    "yoy": 0.202
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 245.8,
+    "yoy": 0.145
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 240.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-08",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 199.5,
+    "yoy": 0.046
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 21.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 150.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 150.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 129.6,
+    "yoy": 0.155
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 52.8,
+    "yoy": 0.207
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 280.3,
+    "yoy": 0.124
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 283.8,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-09",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 224.1,
+    "yoy": 0.063
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 25.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 162.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 165.7,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 128.2,
+    "yoy": 0.073
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 56.8,
+    "yoy": 0.277
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 293.2,
+    "yoy": 0.076
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 295.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-10",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 224.2,
+    "yoy": -0.008
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 28.4,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 170.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 175.7,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 132.1,
+    "yoy": 0.042
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 60.1,
+    "yoy": 0.524
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 299.8,
+    "yoy": 0.023
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 310.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-11",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 222.5,
+    "yoy": -0.081
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 27.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 156.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 156.0,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 133.7,
+    "yoy": 0.026
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 58.8,
+    "yoy": 0.462
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 278.9,
+    "yoy": -0.09
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 279.1,
+    "yoy": null
+  },
+  {
+    "record_date": "2025-12",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 226.1,
+    "yoy": -0.14
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 28.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 86.4,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 93.8,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 59.6,
+    "yoy": -0.2
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 57.6,
+    "yoy": 0.52
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 197.3,
+    "yoy": -0.062
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 200.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-01",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 154.4,
+    "yoy": -0.139
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 26.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 72.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 64.5,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 46.4,
+    "yoy": -0.32
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 55.5,
+    "yoy": 0.56
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 151.8,
+    "yoy": -0.143
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 137.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-02",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 103.4,
+    "yoy": -0.254
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 34.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 114.4,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 112.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 84.8,
+    "yoy": -0.144
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 69.5,
+    "yoy": 0.743
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 237.8,
+    "yoy": -0.016
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 236.4,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-03",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 164.8,
+    "yoy": -0.15
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV出口",
+    "category": "NEV",
+    "value": 40.6,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV批发",
+    "category": "NEV",
+    "value": 122.5,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV生产",
+    "category": "NEV",
+    "value": 120.9,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "NEV零售",
+    "category": "NEV",
+    "value": 84.9,
+    "yoy": -0.068
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "乘用车出口总量",
+    "category": "总市场",
+    "value": 76.9,
+    "yoy": 0.807
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "乘用车批发总量",
+    "category": "总市场",
+    "value": 211.0,
+    "yoy": -0.04
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "乘用车生产总量",
+    "category": "总市场",
+    "value": 219.3,
+    "yoy": null
+  },
+  {
+    "record_date": "2026-04",
+    "metric_name": "乘用车零售总量",
+    "category": "总市场",
+    "value": 138.4,
+    "yoy": -0.215
+  }
+]

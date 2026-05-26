@@ -1,0 +1,114 @@
+[
+  {
+    "record_date": "2025-01",
+    "nev_retail": 74.4,
+    "total_retail": 179.4,
+    "penetration_pct": 41.5,
+    "nev_yoy": 0.105
+  },
+  {
+    "record_date": "2025-02",
+    "nev_retail": 68.6,
+    "total_retail": 138.6,
+    "penetration_pct": 49.5,
+    "nev_yoy": 0.797
+  },
+  {
+    "record_date": "2025-03",
+    "nev_retail": 99.1,
+    "total_retail": 194.0,
+    "penetration_pct": 51.1,
+    "nev_yoy": 0.38
+  },
+  {
+    "record_date": "2025-04",
+    "nev_retail": 90.5,
+    "total_retail": 175.5,
+    "penetration_pct": 51.6,
+    "nev_yoy": 0.339
+  },
+  {
+    "record_date": "2025-05",
+    "nev_retail": 102.1,
+    "total_retail": 193.2,
+    "penetration_pct": 52.8,
+    "nev_yoy": 0.282
+  },
+  {
+    "record_date": "2025-06",
+    "nev_retail": 111.1,
+    "total_retail": 208.4,
+    "penetration_pct": 53.3,
+    "nev_yoy": 0.297
+  },
+  {
+    "record_date": "2025-07",
+    "nev_retail": 98.7,
+    "total_retail": 182.6,
+    "penetration_pct": 54.1,
+    "nev_yoy": 0.12
+  },
+  {
+    "record_date": "2025-08",
+    "nev_retail": 110.1,
+    "total_retail": 199.5,
+    "penetration_pct": 55.2,
+    "nev_yoy": 0.075
+  },
+  {
+    "record_date": "2025-09",
+    "nev_retail": 129.6,
+    "total_retail": 224.1,
+    "penetration_pct": 57.8,
+    "nev_yoy": 0.155
+  },
+  {
+    "record_date": "2025-10",
+    "nev_retail": 128.2,
+    "total_retail": 224.2,
+    "penetration_pct": 57.2,
+    "nev_yoy": 0.073
+  },
+  {
+    "record_date": "2025-11",
+    "nev_retail": 132.1,
+    "total_retail": 222.5,
+    "penetration_pct": 59.4,
+    "nev_yoy": 0.042
+  },
+  {
+    "record_date": "2025-12",
+    "nev_retail": 133.7,
+    "total_retail": 226.1,
+    "penetration_pct": 59.1,
+    "nev_yoy": 0.026
+  },
+  {
+    "record_date": "2026-01",
+    "nev_retail": 59.6,
+    "total_retail": 154.4,
+    "penetration_pct": 38.6,
+    "nev_yoy": -0.2
+  },
+  {
+    "record_date": "2026-02",
+    "nev_retail": 46.4,
+    "total_retail": 103.4,
+    "penetration_pct": 44.9,
+    "nev_yoy": -0.32
+  },
+  {
+    "record_date": "2026-03",
+    "nev_retail": 84.8,
+    "total_retail": 164.8,
+    "penetration_pct": 51.5,
+    "nev_yoy": -0.144
+  },
+  {
+    "record_date": "2026-04",
+    "nev_retail": 84.9,
+    "total_retail": 138.4,
+    "penetration_pct": 61.3,
+    "nev_yoy": -0.068
+  }
+]
